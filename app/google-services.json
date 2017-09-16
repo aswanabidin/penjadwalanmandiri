@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "816978354271",
+    "firebase_url": "https://penjadwalanmandiri.firebaseio.com",
+    "project_id": "penjadwalanmandiri",
+    "storage_bucket": "penjadwalanmandiri.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:816978354271:android:156f8af1ffb3cec1",
+        "android_client_info": {
+          "package_name": "com.example.aswanabidin.penjadwalanmandiri"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "816978354271-ha277nqd065hi86onetst928ad4vopss.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.aswanabidin.penjadwalanmandiri",
+            "certificate_hash": "4c40026bf89c50a476b14c8794862460a85c7b2c"
+          }
+        },
+        {
+          "client_id": "816978354271-0jvfgm583hm02jgu25h2sgde396bvqvi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBD33gKChGCRKPwDlUTRCZefd8ZA3LwdUg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "816978354271-0jvfgm583hm02jgu25h2sgde396bvqvi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

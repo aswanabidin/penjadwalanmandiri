@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.aswanabidin.penjadwalanmandiri.HalamanUtama">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPutih"
+        android:padding="20dp">
+
+        <ImageView
+            android:id="@+id/imgpenjadwalan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/logo_penjadwalan" />
+
+        <Button
+            android:id="@+id/btnMasukSebagaiOrangTua"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imgpenjadwalan"
+            android:layout_marginTop="70dp"
+            android:background="@drawable/stroke_rounded"
+            android:text="Masuk Sebagai Orang Tua"
+            android:textAllCaps="false"
+            android:textColor="@color/colorPinkSmooth"
+            android:textSize="16sp" />
+
+        <View
+            android:id="@+id/garis1"
+            style="@style/Divider"
+            android:layout_width="140dp"
+            android:layout_height="1dp"
+            android:layout_below="@+id/btnMasukSebagaiOrangTua"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="37dp"
+            android:background="@color/colorGrayText" />
+
+        <TextView
+            android:id="@+id/tvatau"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btnMasukSebagaiOrangTua"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="30dp"
+            android:layout_toRightOf="@+id/garis1"
+            android:text="Atau"
+            android:textColor="@color/colorGrayText" />
+
+        <View
+            android:id="@+id/garis2"
+            style="@style/Divider"
+            android:layout_width="140dp"
+            android:layout_height="1dp"
+            android:layout_below="@+id/btnMasukSebagaiOrangTua"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="37dp"
+            android:layout_toRightOf="@+id/tvatau"
+            android:background="@color/colorGrayText" />
+
+
+        <Button
+            android:id="@+id/btnMasukSebagaiAnak"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvatau"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/btn_rounded_corners"
+            android:text="Masuk Sebagai Anak"
+            android:textAllCaps="false"
+            android:textColor="@color/colorPutih"
+            android:textSize="16sp" />
+
+
+        <TextView
+            android:id="@+id/tvBuatAkun"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btnMasukSebagaiAnak"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="40dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="onClick"
+            android:text="Buat Akun Baru"
+            android:textColor="@color/colorGray"
+            android:textSize="16sp" />
+
+
+    </RelativeLayout>
+
+</LinearLayout>
