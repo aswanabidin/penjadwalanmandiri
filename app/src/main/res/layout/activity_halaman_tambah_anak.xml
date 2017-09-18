@@ -32,7 +32,7 @@
                     android:layout_height="wrap_content"
                     android:text="Tambah Anak"
                     android:textColor="@color/colorPutih"
-                    android:textSize="21sp" />
+                    android:textSize="18sp" />
 
             </RelativeLayout>
 
@@ -72,7 +72,7 @@
                 android:textSize="14sp" />
 
             <EditText
-                android:id="@+id/etNamaKegiatanTambahJadwal"
+                android:id="@+id/etNamaAnak"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_below="@+id/btnPilihProfil"
@@ -80,10 +80,10 @@
                 android:layout_marginRight="20dp"
                 android:layout_marginTop="30dp"
                 android:background="@color/colorGrayLight"
-                android:drawableLeft="@drawable/ic_namakegiatan"
+                android:drawableLeft="@drawable/ic_account"
                 android:drawablePadding="10dp"
                 android:fontFamily="sans-serif"
-                android:hint="Nama Kegiatan"
+                android:hint="Nama Anak"
                 android:paddingLeft="10dp"
                 android:text=""
                 android:textColor="@color/colorHitam"
@@ -91,18 +91,18 @@
                 android:textSize="14sp" />
 
             <EditText
-                android:id="@+id/etPoinTambahJadwal"
+                android:id="@+id/etTempatLahirAnak"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:layout_below="@+id/etNamaKegiatanTambahJadwal"
+                android:layout_below="@+id/etNamaAnak"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginTop="15dp"
                 android:background="@color/colorGrayLight"
-                android:drawableLeft="@drawable/ic_poin"
+                android:drawableLeft="@drawable/ic_location"
                 android:drawablePadding="10dp"
                 android:fontFamily="sans-serif"
-                android:hint="Poin"
+                android:hint="Tempat Lahir"
                 android:paddingLeft="10dp"
                 android:text=""
                 android:textColor="@color/colorHitam"
@@ -110,17 +110,18 @@
                 android:textSize="14sp" />
 
             <EditText
-                android:id="@+id/etTanggalTambahJadwal"
+                android:id="@+id/etTanggalLahirAnak"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:layout_below="@+id/etPoinTambahJadwal"
+                android:layout_below="@+id/etTempatLahirAnak"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginTop="15dp"
                 android:background="@color/colorGrayLight"
                 android:drawableLeft="@drawable/ic_date"
                 android:drawablePadding="10dp"
-                android:hint="Tanggal"
+                android:fontFamily="sans-serif"
+                android:hint="Tanggal Lahir"
                 android:paddingLeft="10dp"
                 android:text=""
                 android:textColor="@color/colorHitam"
@@ -128,17 +129,18 @@
                 android:textSize="14sp" />
 
             <EditText
-                android:id="@+id/etWaktuTambahJadwal"
+                android:id="@+id/etEmailAnak"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:layout_below="@+id/etTanggalTambahJadwal"
+                android:layout_below="@+id/etTanggalLahirAnak"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginTop="15dp"
                 android:background="@color/colorGrayLight"
-                android:drawableLeft="@drawable/ic_waktu"
+                android:drawableLeft="@drawable/ic_email"
                 android:drawablePadding="10dp"
-                android:hint="Waktu"
+                android:fontFamily="sans-serif"
+                android:hint="Email"
                 android:paddingLeft="10dp"
                 android:text=""
                 android:textColor="@color/colorHitam"
@@ -146,24 +148,42 @@
                 android:textSize="14sp" />
 
             <EditText
-                android:id="@+id/etCatatanTambahJadwal"
+                android:id="@+id/etNamaPenggunaAnak"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/etWaktuTambahJadwal"
+                android:layout_height="50dp"
+                android:layout_below="@+id/etEmailAnak"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/colorGrayLight"
+                android:drawableLeft="@drawable/ic_account"
+                android:drawablePadding="10dp"
+                android:fontFamily="sans-serif"
+                android:hint="Nama Pengguna"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:text=""
+                android:textColor="@color/colorHitam"
+                android:textColorHint="@color/colorGrayText"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/etKataSandiAnak"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/etNamaPenggunaAnak"
                 android:layout_marginBottom="100dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginTop="15dp"
                 android:background="@color/colorGrayLight"
-                android:drawableLeft="@drawable/ic_catatan"
+                android:drawableLeft="@drawable/ic_kunci"
                 android:drawablePadding="10dp"
-                android:gravity="top|left"
-                android:hint="Catatan"
-                android:inputType="textMultiLine"
-                android:lines="5"
+                android:fontFamily="sans-serif"
+                android:hint="Kata Sandi"
+                android:inputType="textPassword"
                 android:paddingLeft="10dp"
                 android:paddingTop="10dp"
-                android:scrollHorizontally="false"
                 android:text=""
                 android:textColor="@color/colorHitam"
                 android:textColorHint="@color/colorGrayText"
@@ -182,7 +202,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/btn_rounded_corners"
-            android:text="Tambah Anak"
+            android:text="Tambah Akun Anak"
             android:textAllCaps="false"
             android:textColor="@color/colorPutih"
             android:textSize="14sp" />

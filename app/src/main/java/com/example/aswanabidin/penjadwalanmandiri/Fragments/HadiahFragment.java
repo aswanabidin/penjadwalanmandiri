@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.aswanabidin.penjadwalanmandiri.HalamanTambahAnak;
+import com.example.aswanabidin.penjadwalanmandiri.HalamanTambahHadiah;
 import com.example.aswanabidin.penjadwalanmandiri.R;
 
 /**
@@ -18,7 +19,7 @@ import com.example.aswanabidin.penjadwalanmandiri.R;
  */
 public class HadiahFragment extends Fragment {
 
-    private Button btntambahakunanak;
+    private Button btntambahhadiah;
 
 
     public HadiahFragment() {
@@ -31,6 +32,15 @@ public class HadiahFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_hadiah, container, false);
+
+        btntambahhadiah = (Button) view.findViewById(R.id.btnTambahHadiah);
+        btntambahhadiah.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), HalamanTambahHadiah.class);
+                startActivity(intent);
+            }
+        });
 
 
         return view;

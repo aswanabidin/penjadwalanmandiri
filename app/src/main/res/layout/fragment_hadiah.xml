@@ -10,7 +10,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:text="Halaman Jadwal"
+        android:text="Halaman Hadiah"
         android:textSize="20dp" />
 
     <LinearLayout
@@ -20,11 +20,11 @@
         android:padding="10dp">
 
         <Button
-            android:id="@+id/btnTambahJadwal"
+            android:id="@+id/btnTambahHadiah"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/btn_rounded_corners"
-            android:text="Tambah Jadwal"
+            android:text="Tambah Hadiah"
             android:textAllCaps="false"
             android:textColor="@color/colorPutih" />
 

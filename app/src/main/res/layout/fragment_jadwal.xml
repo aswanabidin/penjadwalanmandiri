@@ -29,4 +29,11 @@
 
     </LinearLayout>
 
+    <!-- item recylerview -->
+    <android.support.v7.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/listItenerary"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/appbarlayout"></android.support.v7.widget.RecyclerView>
+
 </RelativeLayout>

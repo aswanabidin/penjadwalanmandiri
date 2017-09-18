@@ -32,7 +32,7 @@
                     android:layout_height="wrap_content"
                     android:text="Tambah Jadwal"
                     android:textColor="@color/colorPutih"
-                    android:textSize="21sp" />
+                    android:textSize="18sp" />
 
             </RelativeLayout>
 
@@ -69,7 +69,7 @@
                 android:text="Pilih"
                 android:textAllCaps="false"
                 android:textColor="@color/colorPinkSmooth"
-                android:textSize="16sp" />
+                android:textSize="14sp" />
 
             <EditText
                 android:id="@+id/etNamaKegiatanTambahJadwal"
@@ -88,7 +88,7 @@
                 android:text=""
                 android:textColor="@color/colorHitam"
                 android:textColorHint="@color/colorGrayText"
-                android:textSize="16sp" />
+                android:textSize="14sp" />
 
             <EditText
                 android:id="@+id/etPoinTambahJadwal"
@@ -107,7 +107,7 @@
                 android:text=""
                 android:textColor="@color/colorHitam"
                 android:textColorHint="@color/colorGrayText"
-                android:textSize="16sp" />
+                android:textSize="14sp" />
 
             <EditText
                 android:id="@+id/etTanggalTambahJadwal"
@@ -125,7 +125,7 @@
                 android:text=""
                 android:textColor="@color/colorHitam"
                 android:textColorHint="@color/colorGrayText"
-                android:textSize="16sp" />
+                android:textSize="14sp" />
 
             <EditText
                 android:id="@+id/etWaktuTambahJadwal"
@@ -143,7 +143,7 @@
                 android:text=""
                 android:textColor="@color/colorHitam"
                 android:textColorHint="@color/colorGrayText"
-                android:textSize="16sp" />
+                android:textSize="14sp" />
 
             <EditText
                 android:id="@+id/etCatatanTambahJadwal"
@@ -167,7 +167,7 @@
                 android:text=""
                 android:textColor="@color/colorHitam"
                 android:textColorHint="@color/colorGrayText"
-                android:textSize="16sp" />
+                android:textSize="14sp" />
         </RelativeLayout>
     </ScrollView>
 
@@ -184,7 +184,8 @@
             android:background="@drawable/btn_rounded_corners"
             android:text="Tambah Jadwal"
             android:textAllCaps="false"
-            android:textColor="@color/colorPutih" />
+            android:textColor="@color/colorPutih"
+            android:textSize="14sp" />
 
     </LinearLayout>
 

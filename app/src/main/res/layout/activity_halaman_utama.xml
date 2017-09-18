@@ -30,7 +30,7 @@
             android:text="Masuk Sebagai Orang Tua"
             android:textAllCaps="false"
             android:textColor="@color/colorPinkSmooth"
-            android:textSize="16sp" />
+            android:textSize="14sp" />
 
         <View
             android:id="@+id/garis1"
@@ -76,7 +76,7 @@
             android:text="Masuk Sebagai Anak"
             android:textAllCaps="false"
             android:textColor="@color/colorPutih"
-            android:textSize="16sp" />
+            android:textSize="14sp" />
 
 
         <TextView
@@ -92,7 +92,7 @@
             android:onClick="onClick"
             android:text="Buat Akun Baru"
             android:textColor="@color/colorGray"
-            android:textSize="16sp" />
+            android:textSize="14sp" />
 
 
     </RelativeLayout>

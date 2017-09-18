@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
+import com.example.aswanabidin.penjadwalanmandiri.Fragments.AnakFragment;
+
 public class HalamanTambahAnak extends AppCompatActivity {
 
     @Override
@@ -27,7 +29,7 @@ public class HalamanTambahAnak extends AppCompatActivity {
         int id = item.getItemId();
 
         if (id == android.R.id.home) {
-            Intent intent = new Intent(this, HalamanUtama.class);
+            Intent intent = new Intent(this, AnakFragment.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(intent);
             finish();

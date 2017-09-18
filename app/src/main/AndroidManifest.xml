@@ -48,7 +48,22 @@
             android:name=".HalamanTambahJadwal"
             android:label=""
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".HalamanTambahAnak"></activity>
+        <activity
+            android:name=".HalamanTambahAnak"
+            android:label=""
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".HalamanTambahHadiah"
+            android:label=""
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".HalamanEditProfil"
+            android:label=""
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".HalamanNotifikasiOrangTua"
+            android:label=""
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>

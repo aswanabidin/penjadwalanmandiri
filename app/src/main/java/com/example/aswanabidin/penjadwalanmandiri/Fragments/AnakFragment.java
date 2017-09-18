@@ -1,19 +1,24 @@
 package com.example.aswanabidin.penjadwalanmandiri.Fragments;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.aswanabidin.penjadwalanmandiri.HalamanTambahAnak;
 import com.example.aswanabidin.penjadwalanmandiri.R;
 
 /**
  * A simple {@link Fragment} subclass.
  */
 public class AnakFragment extends Fragment {
+
+    private Button btntambahanak;
 
 
     public AnakFragment() {
@@ -26,8 +31,14 @@ public class AnakFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_anak, container, false);
-        TextView textView = new TextView(getActivity());
-        textView.setText(R.string.hello_blank_fragment);
+        btntambahanak = (Button) view.findViewById(R.id.btnTambahAkunAnak);
+        btntambahanak.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), HalamanTambahAnak.class);
+                startActivity(intent);
+            }
+        });
         return view;
     }
 
