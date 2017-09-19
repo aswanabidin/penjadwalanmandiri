@@ -5,17 +5,33 @@
     tools:context="com.example.aswanabidin.penjadwalanmandiri.Fragments.JadwalFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+
+    <!-- item recylerview -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/listJadwalAnakOrtu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/appbarlayout"></android.support.v7.widget.RecyclerView>
+
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/progress_circle"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:layout_centerInParent="true"
-        android:text="Halaman Jadwal"
-        android:textSize="20dp" />
+        android:indeterminate="true" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:layout_alignParentBottom="true"
+        android:gravity="bottom"
+        android:background="@color/colorPutih"
         android:padding="10dp">
 
         <Button
@@ -23,17 +39,13 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/btn_rounded_corners"
+            android:clickable="true"
+            android:focusable="true"
             android:text="Tambah Jadwal"
             android:textAllCaps="false"
             android:textColor="@color/colorPutih" />
 
     </LinearLayout>
 
-    <!-- item recylerview -->
-    <android.support.v7.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/listItenerary"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/appbarlayout"></android.support.v7.widget.RecyclerView>
-
 </RelativeLayout>
+

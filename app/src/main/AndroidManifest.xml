@@ -64,6 +64,7 @@
             android:name=".HalamanNotifikasiOrangTua"
             android:label=""
             android:theme="@style/AppTheme.NoActionBar" />
+
     </application>
 
 </manifest>
