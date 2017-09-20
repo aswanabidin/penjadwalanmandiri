@@ -14,7 +14,7 @@ public class TambahAnakOrtuModel implements Parcelable {
     public String tgllahiranakortu;
     public String emailanakortu;
     public String namapenggunaanakortu;
-    public int katasandianakortu;
+    public String katasandianakortu;
 
     public String getNamaanakortu() {
         return namaanakortu;
@@ -56,11 +56,11 @@ public class TambahAnakOrtuModel implements Parcelable {
         this.namapenggunaanakortu = namapenggunaanakortu;
     }
 
-    public int getKatasandianakortu() {
+    public String getKatasandianakortu() {
         return katasandianakortu;
     }
 
-    public void setKatasandianakortu(int katasandianakortu) {
+    public void setKatasandianakortu(String katasandianakortu) {
         this.katasandianakortu = katasandianakortu;
     }
 
@@ -68,7 +68,7 @@ public class TambahAnakOrtuModel implements Parcelable {
         return CREATOR;
     }
 
-    public TambahAnakOrtuModel(String namaanakortu, String tempatlahiranakortu, String tgllahiranakortu, String emailanakortu, String namapenggunaanakortu, int katasandianakortu) {
+    public TambahAnakOrtuModel(String namaanakortu, String tempatlahiranakortu, String tgllahiranakortu, String emailanakortu, String namapenggunaanakortu, String katasandianakortu) {
         this.namaanakortu = namaanakortu;
         this.tempatlahiranakortu = tempatlahiranakortu;
         this.tgllahiranakortu = tgllahiranakortu;
@@ -78,6 +78,12 @@ public class TambahAnakOrtuModel implements Parcelable {
     }
 
     protected TambahAnakOrtuModel(Parcel in) {
+        namaanakortu = in.readString();
+        tempatlahiranakortu = in.readString();
+        tgllahiranakortu = in.readString();
+        emailanakortu = in.readString();
+        namapenggunaanakortu = in.readString();
+        katasandianakortu = in.readString();
     }
 
     public static final Creator<TambahAnakOrtuModel> CREATOR = new Creator<TambahAnakOrtuModel>() {
@@ -99,5 +105,11 @@ public class TambahAnakOrtuModel implements Parcelable {
 
     @Override
     public void writeToParcel(Parcel parcel, int i) {
+        parcel.writeString(namaanakortu);
+        parcel.writeString(tempatlahiranakortu);
+        parcel.writeString(tgllahiranakortu);
+        parcel.writeString(emailanakortu);
+        parcel.writeString(namapenggunaanakortu);
+        parcel.writeString(katasandianakortu);
     }
 }

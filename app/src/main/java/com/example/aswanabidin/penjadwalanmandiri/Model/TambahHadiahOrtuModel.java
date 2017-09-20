@@ -48,6 +48,9 @@ public class TambahHadiahOrtuModel implements Parcelable {
     }
 
     protected TambahHadiahOrtuModel(Parcel in) {
+        namahadiahortu = in.readString();
+        poinhadiahortu = in.readString();
+        deskripsihadiahortu = in.readString();
     }
 
     public static final Creator<TambahHadiahOrtuModel> CREATOR = new Creator<TambahHadiahOrtuModel>() {
@@ -69,5 +72,8 @@ public class TambahHadiahOrtuModel implements Parcelable {
 
     @Override
     public void writeToParcel(Parcel parcel, int i) {
+        parcel.writeString(namahadiahortu);
+        parcel.writeString(poinhadiahortu);
+        parcel.writeString(deskripsihadiahortu);
     }
 }

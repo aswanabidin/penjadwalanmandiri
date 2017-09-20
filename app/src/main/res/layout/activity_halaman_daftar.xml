@@ -55,7 +55,8 @@
             android:background="@color/colorGrayLight"
             android:drawableLeft="@drawable/ic_account"
             android:drawablePadding="10dp"
-            android:hint="Nama Pengguna"
+            android:hint="Nama"
+            android:inputType="textPersonName|textCapWords"
             android:paddingLeft="10dp"
             android:text=""
             android:textColor="@color/colorHitam"
@@ -80,17 +81,36 @@
             android:textColorHint="@color/colorGrayText"
             android:textSize="14sp" />
 
+        <Spinner
+            android:id="@+id/spinortu"
+            android:layout_width="match_parent"
+            android:layout_height="57dp"
+            android:layout_below="@+id/etEmailDaftar"
+            android:layout_marginTop="15dp"
+            android:background="@color/colorGrayLight"
+            android:hint="Passenger"
+            android:paddingLeft="23dp"
+            android:spinnerMode="dialog"></Spinner>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/etEmailDaftar"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/ic_account" />
+
         <EditText
-            android:id="@+id/etNamaPenggunaDaftar"
+            android:id="@+id/etUsernameDaftar"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:layout_below="@+id/etEmailDaftar"
+            android:layout_below="@+id/spinortu"
             android:layout_marginTop="15dp"
             android:background="@color/colorGrayLight"
             android:drawableLeft="@drawable/ic_account"
             android:drawablePadding="10dp"
             android:hint="Nama Pengguna"
-            android:inputType="textEmailAddress"
+            android:inputType="textPersonName"
             android:paddingLeft="10dp"
             android:text=""
             android:textColor="@color/colorHitam"
@@ -101,13 +121,13 @@
             android:id="@+id/etKataSandiDaftar"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:layout_below="@+id/etNamaPenggunaDaftar"
+            android:layout_below="@+id/etUsernameDaftar"
             android:layout_marginTop="15dp"
             android:background="@color/colorGrayLight"
             android:drawableLeft="@drawable/ic_kunci"
             android:drawablePadding="10dp"
             android:hint="Kata Sandi"
-            android:inputType="textEmailAddress"
+            android:inputType="textCapSentences"
             android:paddingLeft="10dp"
             android:text=""
             android:textColor="@color/colorHitam"
@@ -115,13 +135,13 @@
             android:textSize="14sp" />
 
         <Button
-            android:id="@+id/btnMasukSebagaiOrtu"
+            android:id="@+id/btnDaftarAkun"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/etKataSandiDaftar"
             android:layout_marginTop="30dp"
             android:background="@drawable/btn_rounded_corners"
-            android:text="Masuk"
+            android:text="Daftar"
             android:textAllCaps="false"
             android:textColor="@color/colorPutih"
             android:textSize="14sp" />

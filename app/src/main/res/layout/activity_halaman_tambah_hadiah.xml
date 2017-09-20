@@ -84,6 +84,7 @@
                 android:drawablePadding="10dp"
                 android:fontFamily="sans-serif"
                 android:hint="Nama Hadiah"
+                android:inputType="textCapSentences"
                 android:paddingLeft="10dp"
                 android:text=""
                 android:textColor="@color/colorHitam"
@@ -91,7 +92,7 @@
                 android:textSize="14sp" />
 
             <EditText
-                android:id="@+id/etPoinTambahHadiah"
+                android:id="@+id/etPoinHadiah"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_below="@+id/etNamaHadiah"
@@ -110,10 +111,10 @@
                 android:textSize="14sp" />
 
             <EditText
-                android:id="@+id/etCatatanTambahJadwal"
+                android:id="@+id/etDeskripsiHadiah"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/etPoinTambahHadiah"
+                android:layout_below="@+id/etPoinHadiah"
                 android:layout_marginBottom="100dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
@@ -143,6 +144,7 @@
         android:padding="10dp">
 
         <Button
+            android:id="@+id/btnSubmitHadiahOrtu"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/btn_rounded_corners"
