@@ -16,6 +16,10 @@ public class TambahAnakOrtuModel implements Parcelable {
     public String namapenggunaanakortu;
     public String katasandianakortu;
 
+    public TambahAnakOrtuModel(){
+
+    }
+
     public String getNamaanakortu() {
         return namaanakortu;
     }

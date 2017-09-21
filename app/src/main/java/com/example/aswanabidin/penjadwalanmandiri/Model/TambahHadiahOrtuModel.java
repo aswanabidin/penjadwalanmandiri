@@ -12,6 +12,36 @@ public class TambahHadiahOrtuModel implements Parcelable {
     public String namahadiahortu;
     public String poinhadiahortu;
     public String deskripsihadiahortu;
+    public String url;
+
+    public TambahHadiahOrtuModel(){
+
+    }
+
+    public TambahHadiahOrtuModel(String namahadiahortu, String poinhadiahortu, String deskripsihadiahortu, String url) {
+        this.namahadiahortu = namahadiahortu;
+        this.poinhadiahortu = poinhadiahortu;
+        this.deskripsihadiahortu = deskripsihadiahortu;
+        this.url = url;
+    }
+
+    protected TambahHadiahOrtuModel(Parcel in) {
+        namahadiahortu = in.readString();
+        poinhadiahortu = in.readString();
+        deskripsihadiahortu = in.readString();
+        url = in.readString();
+    }
+
+
+
+    public String getUrl() {
+
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
 
     public String getNamahadiahortu() {
         return namahadiahortu;
@@ -41,18 +71,6 @@ public class TambahHadiahOrtuModel implements Parcelable {
         return CREATOR;
     }
 
-    public TambahHadiahOrtuModel(String namahadiahortu, String poinhadiahortu, String deskripsihadiahortu) {
-        this.namahadiahortu = namahadiahortu;
-        this.poinhadiahortu = poinhadiahortu;
-        this.deskripsihadiahortu = deskripsihadiahortu;
-    }
-
-    protected TambahHadiahOrtuModel(Parcel in) {
-        namahadiahortu = in.readString();
-        poinhadiahortu = in.readString();
-        deskripsihadiahortu = in.readString();
-    }
-
     public static final Creator<TambahHadiahOrtuModel> CREATOR = new Creator<TambahHadiahOrtuModel>() {
         @Override
         public TambahHadiahOrtuModel createFromParcel(Parcel in) {
@@ -75,5 +93,6 @@ public class TambahHadiahOrtuModel implements Parcelable {
         parcel.writeString(namahadiahortu);
         parcel.writeString(poinhadiahortu);
         parcel.writeString(deskripsihadiahortu);
+        parcel.writeString(url);
     }
 }

@@ -114,7 +114,7 @@ public class JadwalFragment extends Fragment {
                     jadwal.setWaktuortu(waktukegiatan);
                     jadwal.setCatatanortu(catatankegiatan);
                     jadwal.setUrl(url);
-                    Log.i("infodata",url);
+//                    Log.i("infodata",url);
                     mAdapter.addData(jadwal);
                 }
                 progressBar.setVisibility(View.GONE); //progress bar berhenti ketika cardview muncul
