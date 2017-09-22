@@ -6,6 +6,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -26,9 +28,7 @@ public class HalamanDetailJadwalOrtu extends AppCompatActivity {
     Context context;
     private DatabaseReference myRef;
     FirebaseDatabase database;
-
-    public static final String FB_STORAGE_PATH = "image/";
-    public static final String FB_DATABASE_PATH = "tambahjadwaldariortu";
+    private Button btneditjadwal;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +47,15 @@ public class HalamanDetailJadwalOrtu extends AppCompatActivity {
         tvwaktu = (TextView) findViewById(R.id.tvwaktukegiatan);
         tvpoin = (TextView) findViewById(R.id.tvpoinkegiatan);
         imageView = (ImageView) findViewById(R.id.imgjadwal);
+
+        btneditjadwal = (Button) findViewById(R.id.btnEditJadwal);
+        btneditjadwal.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(HalamanDetailJadwalOrtu.this, HalamanEditJadwalOrtu.class);
+                startActivity(intent);
+            }
+        });
 
         //untuk mengambil data dari holder recylceradapter dan menampilkan di textview
         Bundle bundle;

@@ -106,14 +106,14 @@ public class AnakFragment extends Fragment {
                     String mnamaanak = value.getNamaanakortu();
                     String mtmplahir = value.getTempatlahiranakortu();
                     String mtgllahir = value.getTgllahiranakortu();
-//                    String memail = value.getEmailanakortu();
+                    String memail = value.getEmailanakortu();
                     String musername = value.getNamapenggunaanakortu();
 //                    String mpass = value.getKatasandianakortu();
                     String url = value.getUrl();
                     anak.setNamaanakortu(mnamaanak);
                     anak.setTempatlahiranakortu(mtmplahir);
                     anak.setTgllahiranakortu(mtgllahir);
-//                    anak.setEmailanakortu(memail);
+                    anak.setEmailanakortu(memail);
                     anak.setNamapenggunaanakortu(musername);
 //                    anak.setKatasandianakortu(mpass);
                     anak.setUrl(url);

@@ -13,6 +13,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.aswanabidin.penjadwalanmandiri.Fragments.HadiahFragment;
+import com.example.aswanabidin.penjadwalanmandiri.HalamanDetailHadiahOrtu;
 import com.example.aswanabidin.penjadwalanmandiri.Model.TambahHadiahOrtuModel;
 import com.example.aswanabidin.penjadwalanmandiri.R;
 import com.google.firebase.storage.StorageReference;
@@ -56,12 +57,13 @@ public class TambahHadiahAnakOrtuAdapter extends RecyclerView.Adapter<TambahHadi
 
         holder.tvnamahadiah.setText(tambahHadiahOrtuModel.getNamahadiahortu());
         holder.tvpoinhadiah.setText(tambahHadiahOrtuModel.getPoinhadiahortu());
+//        holder.tvdeskripsihadiah.setText(tambahHadiahOrtuModel.getDeskripsihadiahortu());
         Picasso.with(context).load(tambahHadiahOrtuModel.getUrl()).fit().centerCrop().into(holder.imageView);
         holder.itemCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(context, HadiahFragment.class);
-                intent.putExtra("image", tambahHadiahOrtuModel);
+                Intent intent = new Intent(context, HalamanDetailHadiahOrtu.class);
+                intent.putExtra("tambahhadiahdariortu", tambahHadiahOrtuModel);
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 context.startActivity(intent);
             }
@@ -88,7 +90,7 @@ public class TambahHadiahAnakOrtuAdapter extends RecyclerView.Adapter<TambahHadi
 
             tvnamahadiah = (TextView) itemView.findViewById(R.id.tvNamaHadiah);
             tvpoinhadiah = (TextView) itemView.findViewById(R.id.tvPoinHadiah);
-//            tvdeskripsihadiah = (TextView) itemView.findViewById(R.id.tvd);
+//            tvdeskripsihadiah = (TextView) itemView.findViewById(R.id.tvdeskripsihadiah);
             imageView = (ImageView) itemView.findViewById(R.id.imgprofilhadiah);
             itemCard = (View) itemView.findViewById(R.id.item_card);
         }

@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.aswanabidin.penjadwalanmandiri.HalamanEditHadiahOrtu">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbarlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:layout_collapseMode="pin"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left">
+
+                <TextView
+                    android:id="@+id/toolbarTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Edit Hadiah"
+                    android:textColor="@color/colorPutih"
+                    android:textSize="18sp" />
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <ScrollView
+        android:id="@+id/relayoutTambahJad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/appbarlayout">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imghadiah"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/ic_account_circle" />
+
+            <Button
+                android:id="@+id/btnPilihProfil"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imghadiah"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/stroke_rounded"
+                android:text="Pilih"
+                android:textAllCaps="false"
+                android:textColor="@color/colorPinkSmooth"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/etEditNamaHadiah"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/btnPilihProfil"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="30dp"
+                android:background="@color/colorGrayLight"
+                android:drawableLeft="@drawable/ic_hadiah"
+                android:drawablePadding="10dp"
+                android:fontFamily="sans-serif"
+                android:hint="Nama Hadiah"
+                android:inputType="textCapSentences"
+                android:onClick=""
+                android:paddingLeft="10dp"
+                android:text=""
+                android:textColor="@color/colorHitam"
+                android:textColorHint="@color/colorGrayText"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/etEditPoinHadiah"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/etEditNamaHadiah"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/colorGrayLight"
+                android:drawableLeft="@drawable/ic_poin"
+                android:drawablePadding="10dp"
+                android:fontFamily="sans-serif"
+                android:hint="Poin"
+                android:inputType="number"
+                android:paddingLeft="10dp"
+                android:text=""
+                android:textColor="@color/colorHitam"
+                android:textColorHint="@color/colorGrayText"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/etEditDeskripsiHadiah"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/etEditPoinHadiah"
+                android:layout_marginBottom="200dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="15dp"
+                android:background="@color/colorGrayLight"
+                android:drawableLeft="@drawable/ic_catatan"
+                android:drawablePadding="10dp"
+                android:gravity="top|left"
+                android:hint="Deskripsi"
+                android:inputType="textMultiLine|textCapSentences"
+                android:lines="5"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:scrollHorizontally="false"
+                android:text=""
+                android:textColor="@color/colorHitam"
+                android:textColorHint="@color/colorGrayText"
+                android:textSize="14sp" />
+        </RelativeLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:background="@color/colorPutih"
+            android:padding="10dp">
+
+            <Button
+                android:id="@+id/btnBatalEditHadiah"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/stroke_rounded"
+                android:elevation="5dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:onClick="btnSubmitOrtuTambahJadwal"
+                android:text="Batal"
+                android:textAllCaps="false"
+                android:textColor="@color/colorPinkSmooth"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/btnSimpanEditHadiah"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/btnBatalEditHadiah"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/btn_rounded_corners"
+                android:elevation="5dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:onClick="btnSubmitOrtuTambahJadwal"
+                android:text="Simpan"
+                android:textAllCaps="false"
+                android:textColor="@color/colorPutih"
+                android:textSize="14sp" />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

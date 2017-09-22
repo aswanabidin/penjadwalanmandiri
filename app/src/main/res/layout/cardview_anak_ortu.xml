@@ -3,12 +3,12 @@
     android:id="@+id/cardview_tambahanakanakortu"
     android:layout_width="match_parent"
     android:layout_height="120dp"
+    android:layout_marginBottom="5dp"
     android:layout_marginLeft="10dp"
     android:layout_marginRight="10dp"
     android:layout_marginTop="10dp"
     android:clickable="true"
     android:focusable="true"
-    android:layout_marginBottom="5dp"
     android:foreground="?selectableItemBackground"
     android:orientation="vertical">
 
@@ -37,6 +37,19 @@
             android:text="Nama Anak"
             android:textColor="@color/colorPinkSmooth"
             android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tvAlamatEmailAnak"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@id/tvNamaAnak"
+            android:gravity="right"
+            android:text="email"
+            android:textColor="@color/colorPutih"
+            android:textSize="12sp" />
 
         <TextView
             android:id="@+id/tvTempatLahirAnak"

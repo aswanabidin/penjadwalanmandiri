@@ -13,6 +13,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.aswanabidin.penjadwalanmandiri.Fragments.AnakFragment;
+import com.example.aswanabidin.penjadwalanmandiri.HalamanDetailProfilAnakOrtu;
 import com.example.aswanabidin.penjadwalanmandiri.Model.TambahAnakOrtuModel;
 import com.example.aswanabidin.penjadwalanmandiri.R;
 import com.google.firebase.storage.StorageReference;
@@ -55,20 +56,19 @@ public class TambahAnakAnakOrtuAdapter extends RecyclerView.Adapter<TambahAnakAn
         holder.tvnamaanak.setText(tambahAnakOrtuModel.getNamaanakortu());
         holder.tvtmplahiranak.setText(tambahAnakOrtuModel.getTempatlahiranakortu());
         holder.tvtgllahiranak.setText(tambahAnakOrtuModel.getTgllahiranakortu());
-//        holder.tvemailanak.setText(tambahAnakOrtuModel.getEmailanakortu());
+        holder.tvemailanak.setText(tambahAnakOrtuModel.getEmailanakortu());
         holder.tvnmapenggunaanak.setText(tambahAnakOrtuModel.getNamapenggunaanakortu());
 //        holder.tvkatasandi.setText(tambahAnakOrtuModel.getKatasandianakortu());
         Picasso.with(context).load(tambahAnakOrtuModel.getUrl()).fit().centerCrop().into(holder.imageView);
         holder.itemCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(context, AnakFragment.class);
-                intent.putExtra("image", tambahAnakOrtuModel);
+                Intent intent = new Intent(context, HalamanDetailProfilAnakOrtu.class);
+                intent.putExtra("tambahanakdariortu", tambahAnakOrtuModel);
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 context.startActivity(intent);
             }
         });
-
 
 
     }
@@ -93,7 +93,7 @@ public class TambahAnakAnakOrtuAdapter extends RecyclerView.Adapter<TambahAnakAn
             tvnamaanak = (TextView) itemView.findViewById(R.id.tvNamaAnak);
             tvtmplahiranak = (TextView) itemView.findViewById(R.id.tvTempatLahirAnak);
             tvtgllahiranak = (TextView) itemView.findViewById(R.id.tvTanggalLahirAnak);
-//            tvemailanak = (TextView) itemView.findViewById(R.id.tvE);
+            tvemailanak = (TextView) itemView.findViewById(R.id.tvAlamatEmailAnak);
             tvnmapenggunaanak = (TextView) itemView.findViewById(R.id.tvUsernameAnak);
 //            tvkatasandi = (TextView) itemView.findViewById(R.id.tvkatansandi);
             imageView = (ImageView)itemView.findViewById(R.id.imgprofilAnak);
