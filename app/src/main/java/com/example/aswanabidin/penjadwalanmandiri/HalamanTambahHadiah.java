@@ -19,6 +19,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
+import android.transition.CircularPropagation;
 import android.view.MenuItem;
 import android.view.View;
 import android.webkit.MimeTypeMap;
@@ -44,6 +45,8 @@ import com.squareup.picasso.Picasso;
 
 import java.io.File;
 import java.util.UUID;
+
+import de.hdodenhof.circleimageview.CircleImageView;
 
 public class HalamanTambahHadiah extends AppCompatActivity implements View.OnClickListener {
 

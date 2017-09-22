@@ -13,6 +13,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.aswanabidin.penjadwalanmandiri.Fragments.JadwalFragment;
+import com.example.aswanabidin.penjadwalanmandiri.HalamanDetailJadwalOrtu;
 import com.example.aswanabidin.penjadwalanmandiri.Model.TambahJadwalOrtuModel;
 import com.example.aswanabidin.penjadwalanmandiri.R;
 import com.google.firebase.storage.StorageReference;
@@ -59,8 +60,8 @@ public class TambahJadwalAnakOrtuAdapeter extends RecyclerView.Adapter<TambahJad
         holder.itemCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(context, JadwalFragment.class);
-                intent.putExtra("image", tambahJadwalOrtuModel);
+                Intent intent = new Intent(context, HalamanDetailJadwalOrtu.class);
+                intent.putExtra("tambahjadwaldariortu", tambahJadwalOrtuModel);
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK); //tadi error nih
                 context.startActivity(intent);
             }

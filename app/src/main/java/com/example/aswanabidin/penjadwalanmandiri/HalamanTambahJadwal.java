@@ -10,6 +10,8 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.graphics.Bitmap;
+import android.graphics.Color;
+import android.graphics.PorterDuff;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
@@ -20,6 +22,8 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
+import android.util.TimeFormatException;
 import android.view.MenuItem;
 import android.view.View;
 import android.webkit.MimeTypeMap;
@@ -27,16 +31,22 @@ import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
+import com.example.aswanabidin.penjadwalanmandiri.Adapter.TambahJadwalAnakOrtuAdapeter;
 import com.example.aswanabidin.penjadwalanmandiri.Fragments.JadwalFragment;
+import com.example.aswanabidin.penjadwalanmandiri.Model.TambahAnakOrtuModel;
 import com.example.aswanabidin.penjadwalanmandiri.Model.TambahJadwalOrtuModel;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.OnProgressListener;
 import com.google.firebase.storage.StorageReference;
@@ -45,9 +55,12 @@ import com.squareup.picasso.Picasso;
 
 import java.io.File;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.UUID;
+
+import de.hdodenhof.circleimageview.CircleImageView;
 
 public class HalamanTambahJadwal extends AppCompatActivity implements View.OnClickListener {
 
@@ -65,7 +78,12 @@ public class HalamanTambahJadwal extends AppCompatActivity implements View.OnCli
     private int REQUEST_CAMERA = 0, SELECT_FILE = 1;
     private ImageView imfoto;
     private String url;
+    private ProgressBar progressBar;
+    String stvdeskripsi,stvnmkegiatan,stvtanggal,stvwaktu,stvpoin,surl;
+    private TambahJadwalAnakOrtuAdapeter mAdapter;
 
+    private ArrayList<TambahAnakOrtuModel> tam = new ArrayList<>();
+    private ArrayList<TambahJadwalOrtuModel> tambahJadwalOrtuModels = new ArrayList<>();
     public static final String FB_STORAGE_PATH = "image/";
     public static final String FB_DATABASE_PATH = "tambahjadwaldariortu";
 
@@ -92,6 +110,8 @@ public class HalamanTambahJadwal extends AppCompatActivity implements View.OnCli
 
         mAuth = FirebaseAuth.getInstance();
         progressDialog = new ProgressDialog(this);
+        //progressbar
+        progressBar = (ProgressBar) findViewById(R.id.progress_circle);
 
         btnsubmit = (Button) findViewById(R.id.btnSubmitOrtuTambahJadwal);
         namakegiatanortu = (EditText) findViewById(R.id.etNamaKegiatanTambahJadwal);
@@ -99,6 +119,7 @@ public class HalamanTambahJadwal extends AppCompatActivity implements View.OnCli
         tglortu = (EditText) findViewById(R.id.etTanggalTambahJadwal);
         waktuortu = (EditText) findViewById(R.id.etWaktuTambahJadwal);
         catatanortu = (EditText) findViewById(R.id.etCatatanTambahJadwal);
+
 
         tglortu = (EditText) findViewById(R.id.etTanggalTambahJadwal);
         tglortu.setOnClickListener(new View.OnClickListener() {
@@ -120,7 +141,7 @@ public class HalamanTambahJadwal extends AppCompatActivity implements View.OnCli
                             tanggal = String.valueOf(selectedday + "/" + (++selectedmonth) + "/" + year);
                         }
                         try {
-                            SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+                            SimpleDateFormat sdf = new SimpleDateFormat("d MMM yyyy");
                             Date date = sdf.parse(tanggal);
                             tanggalpilih = date.getTime();
                         } catch (Exception e) {
@@ -149,8 +170,8 @@ public class HalamanTambahJadwal extends AppCompatActivity implements View.OnCli
                 TimePickerDialog timePickerDialog = new TimePickerDialog(HalamanTambahJadwal.this, R.style.DialogTheme, new TimePickerDialog.OnTimeSetListener() {
                     @Override
                     public void onTimeSet(TimePicker timePicker, int hourOfDay, int minute) {
-
-                        waktuortu.setText(hourOfDay + ":" + minute);
+                        waktuortu.setText("0" + hourOfDay + ":" + minute);
+                        SimpleDateFormat.getTimeInstance();
                     }
                 }, hour, minute, false);
                 timePickerDialog.show();

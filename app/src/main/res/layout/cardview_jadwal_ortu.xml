@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v7.widget.CardView
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/cardview_tambahjadwalanakortu"
-    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="110dp"
     android:layout_marginLeft="10dp"
@@ -18,7 +18,7 @@
         android:layout_height="match_parent"
         android:clickable="true">
 
-        <ImageView
+        <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/imgprofilanakJadwal"
             android:layout_width="90dp"
             android:layout_height="90dp"
@@ -44,9 +44,9 @@
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_marginRight="30dp"
-            android:gravity="right"
             android:layout_marginTop="20dp"
             android:layout_toRightOf="@+id/tvNamaAnakJadwal"
+            android:gravity="right"
             android:text="Tanggal"
             android:textColor="@color/colorGrayText"
             android:textSize="14sp" />
@@ -68,8 +68,8 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/tvNamaAnakJadwal"
             android:layout_marginRight="30dp"
-            android:gravity="right"
             android:layout_toRightOf="@+id/tvNamaKegiatanJadwal"
+            android:gravity="right"
             android:text="Waktu"
             android:textColor="@color/colorGrayText"
             android:textSize="14sp" />

@@ -41,12 +41,12 @@
     </android.support.design.widget.AppBarLayout>
 
     <ScrollView
-        android:layout_below="@+id/appbarlayout"
         android:id="@+id/relayoutTambahJad"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true">
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/appbarlayout">
 
         <RelativeLayout
             android:layout_width="match_parent"

@@ -15,9 +15,18 @@ public class TambahAnakOrtuModel implements Parcelable {
     public String emailanakortu;
     public String namapenggunaanakortu;
     public String katasandianakortu;
+    public String url;
 
     public TambahAnakOrtuModel(){
 
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
     }
 
     public String getNamaanakortu() {
@@ -72,13 +81,14 @@ public class TambahAnakOrtuModel implements Parcelable {
         return CREATOR;
     }
 
-    public TambahAnakOrtuModel(String namaanakortu, String tempatlahiranakortu, String tgllahiranakortu, String emailanakortu, String namapenggunaanakortu, String katasandianakortu) {
+    public TambahAnakOrtuModel(String namaanakortu, String tempatlahiranakortu, String tgllahiranakortu, String emailanakortu, String namapenggunaanakortu, String katasandianakortu, String url) {
         this.namaanakortu = namaanakortu;
         this.tempatlahiranakortu = tempatlahiranakortu;
         this.tgllahiranakortu = tgllahiranakortu;
         this.emailanakortu = emailanakortu;
         this.namapenggunaanakortu = namapenggunaanakortu;
         this.katasandianakortu = katasandianakortu;
+        this.url = url;
     }
 
     protected TambahAnakOrtuModel(Parcel in) {
@@ -88,6 +98,7 @@ public class TambahAnakOrtuModel implements Parcelable {
         emailanakortu = in.readString();
         namapenggunaanakortu = in.readString();
         katasandianakortu = in.readString();
+        url = in.readString();
     }
 
     public static final Creator<TambahAnakOrtuModel> CREATOR = new Creator<TambahAnakOrtuModel>() {
@@ -115,5 +126,6 @@ public class TambahAnakOrtuModel implements Parcelable {
         parcel.writeString(emailanakortu);
         parcel.writeString(namapenggunaanakortu);
         parcel.writeString(katasandianakortu);
+        parcel.writeString(url);
     }
 }

@@ -41,8 +41,6 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/btn_rounded_corners"
-            android:clickable="true"
-            android:focusable="true"
             android:text="Tambah Jadwal"
             android:textAllCaps="false"
             android:textColor="@color/colorPutih" />

@@ -64,7 +64,18 @@
             android:name=".HalamanNotifikasiOrangTua"
             android:label=""
             android:theme="@style/AppTheme.NoActionBar" />
-
+        <activity
+            android:name=".HalamanDetailJadwalOrtu"
+            android:label=""
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".HalamanDetailHadiahOrtu"
+            android:label=""
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".HalamanDetailProfilAnakOrtu"
+            android:label=""
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
