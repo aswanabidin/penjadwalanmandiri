@@ -75,7 +75,7 @@ public class HalamanTambahAnak extends AppCompatActivity implements View.OnClick
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        getSupportActionB 0;p12a021j`=r().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
         lampirfoto = (Button) findViewById(R.id.btnPilihProfil);
