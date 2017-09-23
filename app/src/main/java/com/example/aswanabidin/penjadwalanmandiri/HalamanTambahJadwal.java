@@ -54,6 +54,7 @@ import com.google.firebase.storage.UploadTask;
 import com.squareup.picasso.Picasso;
 
 import java.io.File;
+import java.sql.Time;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -136,12 +137,12 @@ public class HalamanTambahJadwal extends AppCompatActivity implements View.OnCli
                         String tanggal;
                         long tanggalpilih = 0;
                         if (selectedmonth < 10) {
-                            tanggal = String.valueOf(selectedday + "/" + (++selectedmonth) + "/" + year);
+                            tanggal = String.valueOf(selectedday + "-" + (++selectedmonth) + "-" + year);
                         } else {
-                            tanggal = String.valueOf(selectedday + "/" + (++selectedmonth) + "/" + year);
+                            tanggal = String.valueOf(selectedday + "-" + (++selectedmonth) + "-" + year);
                         }
                         try {
-                            SimpleDateFormat sdf = new SimpleDateFormat("d MMM yyyy");
+                            SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
                             Date date = sdf.parse(tanggal);
                             tanggalpilih = date.getTime();
                         } catch (Exception e) {
@@ -170,8 +171,9 @@ public class HalamanTambahJadwal extends AppCompatActivity implements View.OnCli
                 TimePickerDialog timePickerDialog = new TimePickerDialog(HalamanTambahJadwal.this, R.style.DialogTheme, new TimePickerDialog.OnTimeSetListener() {
                     @Override
                     public void onTimeSet(TimePicker timePicker, int hourOfDay, int minute) {
-                        waktuortu.setText("0" + hourOfDay + ":" + minute);
-                        SimpleDateFormat.getTimeInstance();
+                        waktuortu.setText("" + hourOfDay + ":" + minute);
+                        SimpleDateFormat sdt = new SimpleDateFormat("hh:mm:ss a");
+                        sdt.getTimeInstance();
                     }
                 }, hour, minute, false);
                 timePickerDialog.show();

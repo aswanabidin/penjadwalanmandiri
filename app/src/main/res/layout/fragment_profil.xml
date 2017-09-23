@@ -170,7 +170,6 @@
                 android:background="@drawable/stroke_rounded"
                 android:elevation="5dp"
                 android:foreground="?android:attr/selectableItemBackground"
-                android:onClick="btnSubmitOrtuTambahJadwal"
                 android:text="Keluar Akun"
                 android:textAllCaps="false"
                 android:textColor="@color/colorPinkSmooth"

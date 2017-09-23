@@ -5,6 +5,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
 import com.example.aswanabidin.penjadwalanmandiri.Fragments.AnakFragment;
+import com.example.aswanabidin.penjadwalanmandiri.Fragments.AnakJadwalFragment;
 import com.example.aswanabidin.penjadwalanmandiri.Fragments.HadiahFragment;
 import com.example.aswanabidin.penjadwalanmandiri.Fragments.JadwalFragment;
 import com.example.aswanabidin.penjadwalanmandiri.Fragments.ProfilFragment;

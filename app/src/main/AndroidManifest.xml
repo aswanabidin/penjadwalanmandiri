@@ -79,13 +79,17 @@
         <activity
             android:name=".HalamanEditJadwalOrtu"
             android:label=""
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".HalamanEditHadiahOrtu"
             android:label=""
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".HalamanEditProfilAnakOrtu"
+            android:label=""
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".HalamanPenjadwalanMandiriAnak"
             android:label=""
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>

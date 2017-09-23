@@ -1,0 +1,182 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.aswanabidin.penjadwalanmandiri.Fragments.AnakProfilFragment">
+
+
+    <ScrollView
+        android:id="@+id/scrprofil"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imgprofil"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/ic_account_circle" />
+
+            <TextView
+                android:id="@+id/tvnamapenggunaprofil"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imgprofil"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:text="Nama Pengguna" />
+
+            <TextView
+                android:id="@+id/tvemailprofil"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvnamapenggunaprofil"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:drawableLeft="@drawable/ic_email"
+                android:drawablePadding="10dp"
+                android:text="Tampilkan Email"
+                android:textSize="14sp" />
+
+            <View
+                android:id="@+id/garisemailprofil"
+                style="@style/Divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/tvemailprofil"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="15dp"
+                android:layout_toRightOf="@+id/tvatau"
+                android:background="@color/colorGrayText" />
+
+            <TextView
+                android:id="@+id/tvtanggallahirprofil"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/garisemailprofil"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:drawableLeft="@drawable/ic_location"
+                android:drawablePadding="10dp"
+                android:text="Tampilkan Tanggal Lahir"
+                android:textSize="14sp" />
+
+            <View
+                android:id="@+id/garistgllahirprofil"
+                style="@style/Divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/tvtanggallahirprofil"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="15dp"
+                android:layout_toRightOf="@+id/tvatau"
+                android:background="@color/colorGrayText" />
+
+            <TextView
+                android:id="@+id/tvorangtuaprofil"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/garistgllahirprofil"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:drawableLeft="@drawable/ic_account"
+                android:drawablePadding="10dp"
+                android:text="Tampilkan Nama Orang Tua"
+                android:textSize="14sp" />
+
+            <View
+                android:id="@+id/garisorangtuaprofil"
+                style="@style/Divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/tvorangtuaprofil"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="15dp"
+                android:layout_toRightOf="@+id/tvatau"
+                android:background="@color/colorGrayText" />
+
+            <TextView
+                android:id="@+id/tvusernameprofil"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/garisorangtuaprofil"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:drawableLeft="@drawable/ic_account"
+                android:drawablePadding="10dp"
+                android:text="Tampilkan Username"
+                android:textSize="14sp" />
+
+            <View
+                android:id="@+id/garisusernameprofil"
+                style="@style/Divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/tvusernameprofil"
+                android:layout_marginBottom="200dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="15dp"
+                android:layout_toRightOf="@+id/tvatau"
+                android:background="@color/colorGrayText" />
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:background="@color/colorPutih"
+            android:padding="10dp">
+
+            <Button
+                android:id="@+id/btnEditProfil"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/btn_rounded_corners"
+                android:elevation="5dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:onClick="btnSubmitOrtuTambahJadwal"
+                android:text="Edit Profil"
+                android:textAllCaps="false"
+                android:textColor="@color/colorPutih"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/btnKeluarAkun"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/btnEditProfil"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/stroke_rounded"
+                android:elevation="5dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:onClick="btnSubmitOrtuTambahJadwal"
+                android:text="Keluar Akun"
+                android:textAllCaps="false"
+                android:textColor="@color/colorPinkSmooth"
+                android:textSize="14sp" />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

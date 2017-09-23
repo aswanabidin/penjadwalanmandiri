@@ -5,6 +5,7 @@ import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.aswanabidin.penjadwalanmandiri.HalamanLupaPassword;
@@ -12,6 +13,7 @@ import com.example.aswanabidin.penjadwalanmandiri.HalamanLupaPassword;
 public class HalamanLoginAnak extends AppCompatActivity implements View.OnClickListener {
 
     private TextView tvanak, tvLupaPass;
+    private Button btnmasuksebagaianak;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +23,9 @@ public class HalamanLoginAnak extends AppCompatActivity implements View.OnClickL
         tvLupaPass = (TextView) findViewById(R.id.tvLupaPassAnak);
         tvLupaPass.setOnClickListener(this);
 
+        btnmasuksebagaianak = (Button) findViewById(R.id.btnMasukSebagaiAnak);
+        btnmasuksebagaianak.setOnClickListener(this);
+
     }
 
     @Override
@@ -28,6 +33,9 @@ public class HalamanLoginAnak extends AppCompatActivity implements View.OnClickL
         switch (view.getId()) {
             case R.id.tvLupaPassAnak:
                 startActivity(new Intent(this, HalamanLupaPassword.class));
+                break;
+            case R.id.btnMasukSebagaiAnak:
+                startActivity(new Intent(this, HalamanPenjadwalanMandiriAnak.class));
                 break;
         }
     }
