@@ -67,7 +67,7 @@
                 android:layout_below="@+id/garisemailprofil"
                 android:layout_marginLeft="30dp"
                 android:layout_marginTop="20dp"
-                android:drawableLeft="@drawable/ic_location"
+                android:drawableLeft="@drawable/ic_date"
                 android:drawablePadding="10dp"
                 android:text="Tampilkan Tanggal Lahir"
                 android:textSize="14sp" />

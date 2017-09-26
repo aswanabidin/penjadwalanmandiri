@@ -24,7 +24,7 @@
 
 
         <EditText
-            android:id="@+id/etNamaPengguna"
+            android:id="@+id/etEmailPengguna"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_below="@+id/logoortu"
@@ -32,7 +32,8 @@
             android:background="@color/colorGrayLight"
             android:drawableLeft="@drawable/ic_person"
             android:drawablePadding="10dp"
-            android:hint="Nama Pengguna"
+            android:hint="Email Pengguna"
+            android:inputType="textEmailAddress"
             android:paddingLeft="10dp"
             android:text=""
             android:textColor="@color/colorHitam"
@@ -43,7 +44,7 @@
             android:id="@+id/etKataSandi"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:layout_below="@+id/etNamaPengguna"
+            android:layout_below="@+id/etEmailPengguna"
             android:layout_marginTop="15dp"
             android:background="@color/colorGrayLight"
             android:drawableLeft="@drawable/ic_kunci"
@@ -64,8 +65,8 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/etKataSandi"
             android:layout_marginTop="30dp"
-            android:onClick="onClick"
             android:background="@drawable/btn_rounded_corners"
+            android:onClick="onClick"
             android:text="Masuk"
             android:textAllCaps="false"
             android:textColor="@color/colorPutih"

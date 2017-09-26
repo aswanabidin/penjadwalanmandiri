@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
+import com.example.aswanabidin.penjadwalanmandiri.HalamanDaftar;
 import com.example.aswanabidin.penjadwalanmandiri.Model.ItemOrtuModel;
 import com.example.aswanabidin.penjadwalanmandiri.R;
 
@@ -34,6 +35,8 @@ public class SpinnerAdapter extends ArrayAdapter<ItemOrtuModel> {
         inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         this.groupid = groupid;
     }
+
+
 
     public View getView(int position, View convertView, ViewGroup parent){
         View itemView = inflater.inflate(groupid,parent,false);

@@ -34,7 +34,7 @@
                 android:text="Nama Pengguna" />
 
             <TextView
-                android:id="@+id/tvemailprofil"
+                android:id="@+id/tvemailanakprofil"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/tvnamapenggunaprofil"
@@ -50,7 +50,7 @@
                 style="@style/Divider"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:layout_below="@+id/tvemailprofil"
+                android:layout_below="@+id/tvemailanakprofil"
                 android:layout_marginLeft="25dp"
                 android:layout_marginRight="25dp"
                 android:layout_marginTop="15dp"
@@ -58,7 +58,7 @@
                 android:background="@color/colorGrayText" />
 
             <TextView
-                android:id="@+id/tvtanggallahirprofil"
+                android:id="@+id/tvtanggallahiranakprofil"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/garisemailprofil"
@@ -74,7 +74,7 @@
                 style="@style/Divider"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:layout_below="@+id/tvtanggallahirprofil"
+                android:layout_below="@+id/tvtanggallahiranakprofil"
                 android:layout_marginLeft="25dp"
                 android:layout_marginRight="25dp"
                 android:layout_marginTop="15dp"
