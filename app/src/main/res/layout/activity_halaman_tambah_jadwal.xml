@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.aswanabidin.penjadwalanmandiri.HalamanTambahJadwal">
+    tools:context="com.example.aswanabidin.penjadwalanmandiri.OrangTua.HalamanTambahJadwal">
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/appbarlayout"
@@ -73,14 +73,33 @@
                 android:textColor="@color/colorPinkSmooth"
                 android:textSize="14sp" />
 
-            <EditText
-                android:id="@+id/etNamaKegiatanTambahJadwal"
+            <Spinner
+                android:id="@+id/spinanak"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_below="@+id/btnPilihProfil"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginTop="30dp"
+                android:background="@color/colorGrayLight"
+                android:paddingLeft="30dp"
+                android:spinnerMode="dialog"></Spinner>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="227dp"
+                android:src="@drawable/ic_account" />
+
+            <EditText
+                android:id="@+id/etNamaKegiatanTambahJadwal"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/spinanak"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="15dp"
                 android:background="@color/colorGrayLight"
                 android:drawableLeft="@drawable/ic_namakegiatan"
                 android:drawablePadding="10dp"

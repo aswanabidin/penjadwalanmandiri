@@ -12,8 +12,7 @@ import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.aswanabidin.penjadwalanmandiri.Fragments.AnakFragment;
-import com.example.aswanabidin.penjadwalanmandiri.HalamanDetailProfilAnakOrtu;
+import com.example.aswanabidin.penjadwalanmandiri.OrangTua.HalamanDetailProfilAnakOrtu;
 import com.example.aswanabidin.penjadwalanmandiri.Model.TambahAnakOrtuModel;
 import com.example.aswanabidin.penjadwalanmandiri.R;
 import com.google.firebase.storage.StorageReference;

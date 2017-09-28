@@ -12,7 +12,7 @@ import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.aswanabidin.penjadwalanmandiri.HalamanDetailJadwalOrtu;
+import com.example.aswanabidin.penjadwalanmandiri.OrangTua.HalamanDetailJadwalOrtu;
 import com.example.aswanabidin.penjadwalanmandiri.Model.TambahJadwalOrtuModel;
 import com.example.aswanabidin.penjadwalanmandiri.R;
 import com.google.firebase.storage.StorageReference;

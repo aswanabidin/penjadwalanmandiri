@@ -84,6 +84,7 @@
             android:clickable="true"
             android:focusable="true"
             android:onClick="onClick"
+            android:foreground="?attr/selectableItemBackground"
             android:text="Lupa Kata Sandi"
             android:textColor="@color/colorGray"
             android:textSize="14sp" />

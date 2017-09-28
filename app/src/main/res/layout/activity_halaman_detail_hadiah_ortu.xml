@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.aswanabidin.penjadwalanmandiri.HalamanDetailHadiahOrtu">
+    tools:context="com.example.aswanabidin.penjadwalanmandiri.OrangTua.HalamanDetailHadiahOrtu">
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/appbarlayout"
@@ -50,10 +50,10 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <ImageView
+            <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/imghadiah"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="10dp"
                 android:src="@drawable/ic_account_circle" />
@@ -130,18 +130,29 @@
                 android:layout_toRightOf="@+id/tvatau"
                 android:background="@color/colorGrayText" />
 
+        </RelativeLayout>
 
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:background="@color/colorPutih"
+            android:padding="10dp">
 
             <Button
                 android:id="@+id/btnEditHadiah"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:layout_below="@+id/garisdeskripsi"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:layout_marginTop="20dp"
                 android:background="@drawable/stroke_rounded"
                 android:text="Edit Hadiah"
+                android:foreground="?attr/selectableItemBackground"
                 android:textAllCaps="false"
                 android:textColor="@color/colorPinkSmooth"
                 android:textSize="14sp" />
@@ -151,18 +162,18 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_below="@+id/btnEditHadiah"
-                android:layout_marginBottom="10dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/btn_rounded_corners"
                 android:text="Hapus Hadiah"
+                android:foreground="?attr/selectableItemBackground"
                 android:textAllCaps="false"
                 android:textColor="@color/colorPutih"
                 android:textSize="14sp" />
 
+
         </RelativeLayout>
 
-    </ScrollView>
+    </LinearLayout>
+
 
 </RelativeLayout>

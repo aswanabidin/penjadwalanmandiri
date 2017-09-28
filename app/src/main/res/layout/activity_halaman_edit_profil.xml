@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.aswanabidin.penjadwalanmandiri.HalamanEditProfil">
+    tools:context="com.example.aswanabidin.penjadwalanmandiri.OrangTua.HalamanEditProfil">
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/appbarlayout"
@@ -223,6 +223,7 @@
             android:background="@drawable/btn_rounded_corners"
             android:text="Simpan"
             android:textAllCaps="false"
+            android:foreground="?attr/selectableItemBackground"
             android:textColor="@color/colorPutih"
             android:textSize="14sp" />
 

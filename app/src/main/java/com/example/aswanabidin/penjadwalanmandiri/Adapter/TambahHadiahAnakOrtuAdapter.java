@@ -12,14 +12,11 @@ import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.aswanabidin.penjadwalanmandiri.Fragments.HadiahFragment;
-import com.example.aswanabidin.penjadwalanmandiri.HalamanDetailHadiahOrtu;
+import com.example.aswanabidin.penjadwalanmandiri.OrangTua.HalamanDetailHadiahOrtu;
 import com.example.aswanabidin.penjadwalanmandiri.Model.TambahHadiahOrtuModel;
 import com.example.aswanabidin.penjadwalanmandiri.R;
 import com.google.firebase.storage.StorageReference;
 import com.squareup.picasso.Picasso;
-
-import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 

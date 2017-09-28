@@ -44,41 +44,41 @@ public class HalamanLoginOrangTua extends AppCompatActivity implements View.OnCl
         progressDialog = new ProgressDialog(this);
         progressDialog.setMessage("Masuk...");
 
-        btnMasukSebagaiOrtu.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                String email = etemail.getText().toString().trim();
-                final String pass = etpass.getText().toString().trim();
-
-                if (TextUtils.isEmpty(email)) {
-                    Toast.makeText(HalamanLoginOrangTua.this, "Masukkan Email Orang Tua!", Toast.LENGTH_SHORT).show();
-                    return;
-                }
-
-                if (TextUtils.isEmpty(pass)) {
-                    Toast.makeText(HalamanLoginOrangTua.this, "Masukkan Kata Sandi!", Toast.LENGTH_SHORT).show();
-                    return;
-                }
-
-                progressDialog.show();
-                auth.signInWithEmailAndPassword(email, pass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-
-                        if (!task.isSuccessful()) {
-                            progressDialog.dismiss();
-                            Toast.makeText(HalamanLoginOrangTua.this, "Akun tidak terdaftar!", Toast.LENGTH_SHORT).show();
-                        } else {
-                            //pindahin ke halaman main
-                            Intent intent = new Intent(HalamanLoginOrangTua.this, HalamanPenjadwalanMandiri.class);
-                            startActivity(intent);
-                        }
-                    }
-                });
-                progressDialog.dismiss();
-            }
-        });
+//        btnMasukSebagaiOrtu.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//
+//                String email = etemail.getText().toString().trim();
+//                final String pass = etpass.getText().toString().trim();
+//
+//                if (TextUtils.isEmpty(email)) {
+//                    Toast.makeText(HalamanLoginOrangTua.this, "Masukkan Email Orang Tua!", Toast.LENGTH_SHORT).show();
+//                    return;
+//                }
+//
+//                if (TextUtils.isEmpty(pass)) {
+//                    Toast.makeText(HalamanLoginOrangTua.this, "Masukkan Kata Sandi!", Toast.LENGTH_SHORT).show();
+//                    return;
+//                }
+//
+//                progressDialog.show();
+//                auth.signInWithEmailAndPassword(email, pass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+//                    @Override
+//                    public void onComplete(@NonNull Task<AuthResult> task) {
+//
+//                        if (!task.isSuccessful()) {
+//                            progressDialog.dismiss();
+//                            Toast.makeText(HalamanLoginOrangTua.this, "Akun tidak terdaftar!", Toast.LENGTH_SHORT).show();
+//                        } else {
+//                            //pindahin ke halaman main
+//                            Intent intent = new Intent(HalamanLoginOrangTua.this, HalamanPenjadwalanMandiri.class);
+//                            startActivity(intent);
+//                        }
+//                    }
+//                });
+//                progressDialog.dismiss();
+//            }
+//        });
     }
 
 

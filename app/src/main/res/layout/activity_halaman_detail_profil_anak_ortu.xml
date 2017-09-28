@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.aswanabidin.penjadwalanmandiri.HalamanDetailProfilAnakOrtu">
+    tools:context="com.example.aswanabidin.penjadwalanmandiri.OrangTua.HalamanDetailProfilAnakOrtu">
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/appbarlayout"
@@ -50,10 +50,10 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <ImageView
+            <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/imganakprofil"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="10dp"
                 android:src="@drawable/ic_account_circle" />
@@ -165,17 +165,39 @@
                 android:layout_toRightOf="@+id/tvatau"
                 android:background="@color/colorGrayText" />
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentBottom="true">
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:background="@color/colorPutih"
+            android:padding="10dp">
+
             <Button
                 android:id="@+id/btnEditAkunAnak"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:layout_below="@+id/tvusernameanakprofil"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:layout_marginTop="40dp"
                 android:background="@drawable/stroke_rounded"
                 android:text="Edit Akun Anak"
                 android:textAllCaps="false"
+                android:foreground="?attr/selectableItemBackground"
                 android:textColor="@color/colorPinkSmooth"
                 android:textSize="14sp" />
 
@@ -183,10 +205,8 @@
                 android:id="@+id/btnHapusAkunAnak"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
+                android:foreground="?attr/selectableItemBackground"
                 android:layout_below="@+id/btnEditAkunAnak"
-                android:layout_marginBottom="10dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/btn_rounded_corners"
                 android:text="Hapus Akun Anak"
@@ -194,8 +214,9 @@
                 android:textColor="@color/colorPutih"
                 android:textSize="14sp" />
 
+
         </RelativeLayout>
 
-    </ScrollView>
+    </LinearLayout>
 
 </RelativeLayout>

@@ -14,11 +14,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ProgressBar;
-import android.widget.TextView;
 
 import com.example.aswanabidin.penjadwalanmandiri.Adapter.TambahAnakAnakOrtuAdapter;
-import com.example.aswanabidin.penjadwalanmandiri.Adapter.TambahHadiahAnakOrtuAdapter;
-import com.example.aswanabidin.penjadwalanmandiri.HalamanTambahAnak;
+import com.example.aswanabidin.penjadwalanmandiri.OrangTua.HalamanTambahAnak;
 import com.example.aswanabidin.penjadwalanmandiri.Model.TambahAnakOrtuModel;
 import com.example.aswanabidin.penjadwalanmandiri.R;
 import com.google.firebase.database.DataSnapshot;

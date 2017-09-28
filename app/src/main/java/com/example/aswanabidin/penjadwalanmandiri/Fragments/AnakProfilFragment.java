@@ -13,7 +13,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.Toast;
 
-import com.example.aswanabidin.penjadwalanmandiri.HalamanEditProfil;
+import com.example.aswanabidin.penjadwalanmandiri.OrangTua.HalamanEditProfil;
 import com.example.aswanabidin.penjadwalanmandiri.HalamanUtama;
 import com.example.aswanabidin.penjadwalanmandiri.R;
 import com.google.firebase.auth.FirebaseAuth;

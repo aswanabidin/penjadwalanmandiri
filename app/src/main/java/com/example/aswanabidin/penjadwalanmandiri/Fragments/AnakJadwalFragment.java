@@ -16,8 +16,7 @@ import android.widget.Button;
 import android.widget.ProgressBar;
 
 import com.example.aswanabidin.penjadwalanmandiri.Adapter.TambahJadwalAnakAdapter;
-import com.example.aswanabidin.penjadwalanmandiri.Adapter.TambahJadwalAnakOrtuAdapeter;
-import com.example.aswanabidin.penjadwalanmandiri.HalamanTambahJadwal;
+import com.example.aswanabidin.penjadwalanmandiri.OrangTua.HalamanTambahJadwal;
 import com.example.aswanabidin.penjadwalanmandiri.Model.TambahJadwalOrtuModel;
 import com.example.aswanabidin.penjadwalanmandiri.R;
 import com.google.firebase.database.DataSnapshot;

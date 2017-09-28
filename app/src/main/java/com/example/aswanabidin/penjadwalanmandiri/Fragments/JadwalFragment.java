@@ -2,7 +2,6 @@ package com.example.aswanabidin.penjadwalanmandiri.Fragments;
 
 import android.content.Context;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.CardView;
@@ -14,10 +13,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ProgressBar;
-import android.widget.TextView;
 
 import com.example.aswanabidin.penjadwalanmandiri.Adapter.TambahJadwalAnakOrtuAdapeter;
-import com.example.aswanabidin.penjadwalanmandiri.HalamanTambahJadwal;
+import com.example.aswanabidin.penjadwalanmandiri.OrangTua.HalamanTambahJadwal;
 import com.example.aswanabidin.penjadwalanmandiri.Model.TambahJadwalOrtuModel;
 import com.example.aswanabidin.penjadwalanmandiri.R;
 import com.google.firebase.database.DataSnapshot;

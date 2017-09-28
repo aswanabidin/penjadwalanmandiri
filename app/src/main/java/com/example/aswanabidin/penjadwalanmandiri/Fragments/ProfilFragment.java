@@ -13,22 +13,17 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.example.aswanabidin.penjadwalanmandiri.HalamanEditProfil;
+import com.example.aswanabidin.penjadwalanmandiri.OrangTua.HalamanEditProfil;
 import com.example.aswanabidin.penjadwalanmandiri.HalamanUtama;
-import com.example.aswanabidin.penjadwalanmandiri.Model.TambahJadwalOrtuModel;
 import com.example.aswanabidin.penjadwalanmandiri.Model.userOrtuModel;
 import com.example.aswanabidin.penjadwalanmandiri.R;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-
-import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 
@@ -106,7 +101,7 @@ public class ProfilFragment extends Fragment {
 
         //instansiasi firebase database
         FirebaseDatabase database = FirebaseDatabase.getInstance();
-        myRef = database.getReference(FB_DATABASE_PATH);
+        myRef = database.getReference().child("users");
         myRef.keepSynced(true);
         myRef.addValueEventListener(new ValueEventListener() {
             @Override
@@ -118,13 +113,13 @@ public class ProfilFragment extends Fragment {
                     userOrtuModel value = dataSnapshot1.getValue(userOrtuModel.class);
 
                     String nama = value.getNamalengkap();
-                    String email = value.getEmail();
-                    String tgllahir = value.getTgllahir();
+                    String emailuser = value.getEmail();
+                    String tglahir = value.getTgllahir();
                     String kategori = value.getKategori();
                     String username = value.getUsername();
                     tvnamalengkap.setText(nama);
-                    tvemail.setText(email);
-                    tvtgllahir.setText(tgllahir);
+                    tvemail.setText(emailuser);
+                    tvtgllahir.setText(tglahir);
                     tvkategori.setText(kategori);
                     tvusername.setText(username);
                 }

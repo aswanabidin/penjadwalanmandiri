@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.aswanabidin.penjadwalanmandiri.HalamanEditProfilAnakOrtu">
+    tools:context="com.example.aswanabidin.penjadwalanmandiri.OrangTua.HalamanEditProfilAnakOrtu">
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/appbarlayout"
@@ -216,7 +216,6 @@
                 android:background="@drawable/stroke_rounded"
                 android:elevation="5dp"
                 android:foreground="?android:attr/selectableItemBackground"
-                android:onClick="btnSubmitOrtuTambahJadwal"
                 android:text="Batal"
                 android:textAllCaps="false"
                 android:textColor="@color/colorPinkSmooth"
@@ -231,7 +230,6 @@
                 android:background="@drawable/btn_rounded_corners"
                 android:elevation="5dp"
                 android:foreground="?android:attr/selectableItemBackground"
-                android:onClick="btnSubmitOrtuTambahJadwal"
                 android:text="Simpan"
                 android:textAllCaps="false"
                 android:textColor="@color/colorPutih"

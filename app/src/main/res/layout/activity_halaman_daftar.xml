@@ -40,129 +40,192 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <RelativeLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/appbarlayout"
-        android:padding="20dp">
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/appbarlayout">
 
-
-        <EditText
-            android:id="@+id/etNamaDaftar"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_below="@+id/logoanak"
-            android:background="@color/colorGrayLight"
-            android:drawableLeft="@drawable/ic_account"
-            android:drawablePadding="10dp"
-            android:hint="Nama"
-            android:inputType="textPersonName|textCapWords"
-            android:paddingLeft="10dp"
-            android:text=""
-            android:textColor="@color/colorHitam"
-            android:textColorHint="@color/colorGrayText"
-            android:textSize="14sp" />
+            android:layout_height="match_parent"
+            android:padding="20dp">
 
-        <EditText
-            android:id="@+id/etEmailDaftar"
+            <ImageView
+                android:id="@+id/imgprofildaftar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/ic_account_circle" />
+
+
+            <Button
+                android:id="@+id/btnProfilDaftar"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imgprofildaftar"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/stroke_rounded"
+                android:text="Pilih"
+                android:textAllCaps="false"
+                android:textColor="@color/colorPinkSmooth"
+                android:textSize="14sp" />
+
+
+            <EditText
+                android:id="@+id/etNamaDaftar"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/btnProfilDaftar"
+                android:background="@color/colorGrayLight"
+                android:drawableLeft="@drawable/ic_account"
+                android:drawablePadding="10dp"
+                android:hint="Nama"
+                android:inputType="textPersonName|textCapWords"
+                android:paddingLeft="10dp"
+                android:text=""
+                android:textColor="@color/colorHitam"
+                android:textColorHint="@color/colorGrayText"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/etTempatLahir"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/etNamaDaftar"
+                android:layout_marginTop="15dp"
+                android:background="@color/colorGrayLight"
+                android:drawableLeft="@drawable/ic_location"
+                android:drawablePadding="10dp"
+                android:hint="Tempat Lahir"
+                android:inputType="textPersonName|textCapWords"
+                android:paddingLeft="10dp"
+                android:text=""
+                android:textColor="@color/colorHitam"
+                android:textColorHint="@color/colorGrayText"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/etTglLahir"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/etTempatLahir"
+                android:layout_marginTop="15dp"
+                android:background="@color/colorGrayLight"
+                android:clickable="true"
+                android:drawableLeft="@drawable/ic_date"
+                android:drawablePadding="10dp"
+                android:focusable="false"
+                android:hint="Tanggal lahir"
+                android:paddingLeft="10dp"
+                android:textColor="@color/colorHitam"
+                android:textColorHint="@color/colorGrayText"
+                android:textSize="14sp" />
+
+
+            <Spinner
+                android:id="@+id/spinortu"
+                android:layout_width="match_parent"
+                android:layout_height="57dp"
+                android:layout_below="@+id/etTglLahir"
+                android:layout_marginTop="15dp"
+                android:background="@color/colorGrayLight"
+                android:hint="Status"
+                android:paddingLeft="35dp"
+                android:spinnerMode="dialog"></Spinner>
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/etTglLahir"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="30dp"
+                android:src="@drawable/ic_account" />
+
+            <EditText
+                android:id="@+id/etEmailDaftar"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/spinortu"
+                android:layout_marginTop="15dp"
+                android:background="@color/colorGrayLight"
+                android:drawableLeft="@drawable/ic_email"
+                android:drawablePadding="10dp"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:paddingLeft="10dp"
+                android:text=""
+                android:textColor="@color/colorHitam"
+                android:textColorHint="@color/colorGrayText"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/etUsernameDaftar"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/etEmailDaftar"
+                android:layout_marginTop="15dp"
+                android:background="@color/colorGrayLight"
+                android:drawableLeft="@drawable/ic_account"
+                android:drawablePadding="10dp"
+                android:hint="Nama Pengguna"
+                android:inputType="textPersonName"
+                android:paddingLeft="10dp"
+                android:text=""
+                android:textColor="@color/colorHitam"
+                android:textColorHint="@color/colorGrayText"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/etKataSandiDaftar"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/etUsernameDaftar"
+                android:layout_marginTop="15dp"
+                android:background="@color/colorGrayLight"
+                android:drawableLeft="@drawable/ic_kunci"
+                android:drawablePadding="10dp"
+                android:hint="Kata Sandi"
+                android:layout_marginBottom="55dp"
+                android:inputType="textCapSentences"
+                android:paddingLeft="10dp"
+                android:text=""
+                android:textColor="@color/colorHitam"
+                android:textColorHint="@color/colorGrayText"
+                android:textSize="14sp" />
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true">
+
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_below="@+id/etNamaDaftar"
-            android:layout_marginTop="15dp"
-            android:background="@color/colorGrayLight"
-            android:drawableLeft="@drawable/ic_email"
-            android:drawablePadding="10dp"
-            android:hint="Email"
-            android:inputType="textEmailAddress"
-            android:paddingLeft="10dp"
-            android:text=""
-            android:textColor="@color/colorHitam"
-            android:textColorHint="@color/colorGrayText"
-            android:textSize="14sp" />
-
-        <EditText
-            android:id="@+id/etTglLahir"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_below="@+id/etEmailDaftar"
-            android:layout_marginTop="15dp"
-            android:background="@color/colorGrayLight"
-            android:clickable="true"
-            android:drawableLeft="@drawable/ic_date"
-            android:drawablePadding="10dp"
-            android:focusable="false"
-            android:hint="Tanggal lahir"
-            android:paddingLeft="10dp"
-            android:textColor="@color/colorHitam"
-            android:textColorHint="@color/colorGrayText"
-            android:textSize="14sp" />
-
-        <Spinner
-            android:id="@+id/spinortu"
-            android:layout_width="match_parent"
-            android:layout_height="57dp"
-            android:layout_below="@+id/etTglLahir"
-            android:layout_marginTop="15dp"
-            android:background="@color/colorGrayLight"
-            android:hint="Passenger"
-            android:paddingLeft="35dp"
-            android:spinnerMode="dialog"></Spinner>
-
-
-        <ImageView
-            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/etTglLahir"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="30dp"
-            android:src="@drawable/ic_account" />
+            android:background="@color/colorPutih"
+            android:padding="10dp">
 
-        <EditText
-            android:id="@+id/etUsernameDaftar"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_below="@+id/spinortu"
-            android:layout_marginTop="15dp"
-            android:background="@color/colorGrayLight"
-            android:drawableLeft="@drawable/ic_account"
-            android:drawablePadding="10dp"
-            android:hint="Nama Pengguna"
-            android:inputType="textPersonName"
-            android:paddingLeft="10dp"
-            android:text=""
-            android:textColor="@color/colorHitam"
-            android:textColorHint="@color/colorGrayText"
-            android:textSize="14sp" />
+            <Button
+                android:id="@+id/btnDaftarAkun"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/btn_rounded_corners"
+                android:elevation="5dp"
+                android:onClick="btnDaftarAkun"
+                android:text="Daftar"
+                android:textAllCaps="false"
+                android:textColor="@color/colorPutih"
+                android:textSize="14sp" />
+        </RelativeLayout>
 
-        <EditText
-            android:id="@+id/etKataSandiDaftar"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_below="@+id/etUsernameDaftar"
-            android:layout_marginTop="15dp"
-            android:background="@color/colorGrayLight"
-            android:drawableLeft="@drawable/ic_kunci"
-            android:drawablePadding="10dp"
-            android:hint="Kata Sandi"
-            android:inputType="textCapSentences"
-            android:paddingLeft="10dp"
-            android:text=""
-            android:textColor="@color/colorHitam"
-            android:textColorHint="@color/colorGrayText"
-            android:textSize="14sp" />
+    </LinearLayout>
 
-        <Button
-            android:id="@+id/btnDaftarAkun"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/etKataSandiDaftar"
-            android:layout_marginTop="30dp"
-            android:background="@drawable/btn_rounded_corners"
-            android:onClick="buatAkun"
-            android:text="Daftar"
-            android:textAllCaps="false"
-            android:textColor="@color/colorPutih"
-            android:textSize="14sp" />
 
-    </RelativeLayout>
 </RelativeLayout>

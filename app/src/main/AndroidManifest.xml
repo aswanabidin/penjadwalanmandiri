@@ -45,19 +45,19 @@
             android:label=""
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".HalamanTambahJadwal"
+            android:name=".OrangTua.HalamanTambahJadwal"
             android:label=""
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".HalamanTambahAnak"
+            android:name=".OrangTua.HalamanTambahAnak"
             android:label=""
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".HalamanTambahHadiah"
+            android:name=".OrangTua.HalamanTambahHadiah"
             android:label=""
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".HalamanEditProfil"
+            android:name=".OrangTua.HalamanEditProfil"
             android:label=""
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
@@ -65,27 +65,27 @@
             android:label=""
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".HalamanDetailJadwalOrtu"
+            android:name=".OrangTua.HalamanDetailJadwalOrtu"
             android:label=""
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".HalamanDetailHadiahOrtu"
+            android:name=".OrangTua.HalamanDetailHadiahOrtu"
             android:label=""
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".HalamanDetailProfilAnakOrtu"
+            android:name=".OrangTua.HalamanDetailProfilAnakOrtu"
             android:label=""
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".HalamanEditJadwalOrtu"
+            android:name=".OrangTua.HalamanEditJadwalOrtu"
             android:label=""
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".HalamanEditHadiahOrtu"
+            android:name=".OrangTua.HalamanEditHadiahOrtu"
             android:label=""
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".HalamanEditProfilAnakOrtu"
+            android:name=".OrangTua.HalamanEditProfilAnakOrtu"
             android:label=""
             android:theme="@style/AppTheme.NoActionBar" />
         <activity

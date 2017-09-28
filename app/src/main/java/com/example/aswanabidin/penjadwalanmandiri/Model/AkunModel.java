@@ -10,21 +10,27 @@ import android.os.Parcelable;
 public class AkunModel {
 
     public String namalengkap;
-    public String email;
+    public String tmplahir;
+    public String tgllahir;
     public String kategoripengguna;
+    public String email;
     public String username;
     public String katasandi;
+    public String url;
 
     public AkunModel(){
 
     }
 
-    public AkunModel(String namalengkap, String email, String kategoripengguna, String username, String katasandi) {
+    public AkunModel(String namalengkap, String tmplahir, String tgllahir, String kategoripengguna, String email, String username, String katasandi, String url) {
         this.namalengkap = namalengkap;
-        this.email = email;
+        this.tmplahir = tmplahir;
+        this.tgllahir = tgllahir;
         this.kategoripengguna = kategoripengguna;
+        this.email = email;
         this.username = username;
         this.katasandi = katasandi;
+        this.url = url;
     }
 
     public String getNamalengkap() {
@@ -35,12 +41,20 @@ public class AkunModel {
         this.namalengkap = namalengkap;
     }
 
-    public String getEmail() {
-        return email;
+    public String getTmplahir() {
+        return tmplahir;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setTmplahir(String tmplahir) {
+        this.tmplahir = tmplahir;
+    }
+
+    public String getTgllahir() {
+        return tgllahir;
+    }
+
+    public void setTgllahir(String tgllahir) {
+        this.tgllahir = tgllahir;
     }
 
     public String getKategoripengguna() {
@@ -49,6 +63,14 @@ public class AkunModel {
 
     public void setKategoripengguna(String kategoripengguna) {
         this.kategoripengguna = kategoripengguna;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getUsername() {
@@ -65,5 +87,13 @@ public class AkunModel {
 
     public void setKatasandi(String katasandi) {
         this.katasandi = katasandi;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
     }
 }
