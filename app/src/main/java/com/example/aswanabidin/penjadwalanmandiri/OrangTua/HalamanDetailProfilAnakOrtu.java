@@ -1,7 +1,9 @@
 package com.example.aswanabidin.penjadwalanmandiri.OrangTua;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -28,7 +30,7 @@ public class HalamanDetailProfilAnakOrtu extends AppCompatActivity {
     Context context;
     private DatabaseReference myRef;
     FirebaseDatabase database;
-    private Button btneditprofilanak;
+    private Button btneditprofilanak, btnhapusanak;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,6 +55,33 @@ public class HalamanDetailProfilAnakOrtu extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(HalamanDetailProfilAnakOrtu.this, HalamanEditProfilAnakOrtu.class);
                 startActivity(intent);
+            }
+        });
+
+        btnhapusanak = (Button) findViewById(R.id.btnHapusAkunAnak);
+        btnhapusanak.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(HalamanDetailProfilAnakOrtu.this);
+                builder.setTitle("Hapus Akun Anak")
+                        .setMessage("Apa anda yakin menghapus akun anak ini?")
+                        .setPositiveButton("Ya", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                FirebaseDatabase database = FirebaseDatabase.getInstance().getReference().child("tambahjadwaldariortu").child("catatanortu").getDatabase();
+//                                database.getReference().removeValue();
+                                startActivity(new Intent(HalamanDetailProfilAnakOrtu.this, HalamanPenjadwalanMandiri.class));
+
+                            }
+                        })
+                        .setNegativeButton("Tidak", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                dialogInterface.cancel();
+                            }
+                        });
+                AlertDialog alert = builder.create();
+                alert.show();
             }
         });
 

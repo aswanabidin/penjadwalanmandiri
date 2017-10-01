@@ -1,7 +1,9 @@
 package com.example.aswanabidin.penjadwalanmandiri.OrangTua;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -28,7 +30,7 @@ public class HalamanDetailHadiahOrtu extends AppCompatActivity {
     Context context;
     private DatabaseReference myRef;
     FirebaseDatabase database;
-    private Button btnedithadiah;
+    private Button btnedithadiah, btnhapushadiah;
 
 
     @Override
@@ -52,6 +54,32 @@ public class HalamanDetailHadiahOrtu extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(HalamanDetailHadiahOrtu.this, HalamanEditHadiahOrtu.class);
                 startActivity(intent);
+            }
+        });
+
+        btnhapushadiah = (Button) findViewById(R.id.btnHapusHadiah);
+        btnhapushadiah.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(HalamanDetailHadiahOrtu.this);
+                builder.setTitle("Hapus Hadiah")
+                        .setMessage("Apa anda yakin menghapus hadiah ini?")
+                        .setPositiveButton("Ya", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                FirebaseDatabase database = FirebaseDatabase.getInstance().getReference().child("tambahjadwaldariortu").child("catatanortu").getDatabase();
+//                                database.getReference().removeValue();
+                                startActivity(new Intent(HalamanDetailHadiahOrtu.this, HalamanPenjadwalanMandiri.class));
+                            }
+                        })
+                        .setNegativeButton("Tidak", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                dialogInterface.cancel();
+                            }
+                        });
+                AlertDialog alert = builder.create();
+                alert.show();
             }
         });
 

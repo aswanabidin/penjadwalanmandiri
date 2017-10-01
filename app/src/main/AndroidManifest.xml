@@ -91,6 +91,18 @@
         <activity
             android:name=".HalamanPenjadwalanMandiriAnak"
             android:label=""
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Anak.HalamanTambahJadwalAnak"
+            android:label=""
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Anak.HalamanDetailJadwalAnak"
+            android:label=""
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".Anak.HalamanDetailHadiahAnak"
+            android:label=""
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

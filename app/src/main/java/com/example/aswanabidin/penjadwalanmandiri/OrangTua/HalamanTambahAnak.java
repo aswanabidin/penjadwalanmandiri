@@ -1,5 +1,6 @@
 package com.example.aswanabidin.penjadwalanmandiri.OrangTua;
 
+import android.app.DatePickerDialog;
 import android.app.ProgressDialog;
 import android.content.ContentResolver;
 import android.content.Context;
@@ -22,10 +23,12 @@ import android.view.MenuItem;
 import android.view.View;
 import android.webkit.MimeTypeMap;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.example.aswanabidin.penjadwalanmandiri.HalamanDaftar;
 import com.example.aswanabidin.penjadwalanmandiri.HalamanPenjadwalanMandiri;
 import com.example.aswanabidin.penjadwalanmandiri.Model.TambahAnakOrtuModel;
 import com.example.aswanabidin.penjadwalanmandiri.R;
@@ -42,6 +45,9 @@ import com.google.firebase.storage.UploadTask;
 import com.squareup.picasso.Picasso;
 
 import java.io.File;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.UUID;
 
 public class HalamanTambahAnak extends AppCompatActivity implements View.OnClickListener{
@@ -99,6 +105,40 @@ public class HalamanTambahAnak extends AppCompatActivity implements View.OnClick
         etemailanak = (EditText) findViewById(R.id.etEmailAnak);
         etusernameanak = (EditText) findViewById(R.id.etNamaPenggunaAnak);
         etkatasandi = (EditText) findViewById(R.id.etKataSandiAnak);
+
+
+        ettgllahiranak.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Calendar currentDate = Calendar.getInstance();
+                year = currentDate.get(Calendar.YEAR);
+                month = currentDate.get(Calendar.MONTH);
+                day = currentDate.get(Calendar.DAY_OF_MONTH);
+
+                DatePickerDialog mDatePicker = new DatePickerDialog(HalamanTambahAnak.this, R.style.DialogTheme, new DatePickerDialog.OnDateSetListener() {
+                    @Override
+                    public void onDateSet(DatePicker datePicker, int selectedyear, int selectedmonth, int selectedday) {
+                        String tanggal;
+                        long tanggalpilih = 0;
+                        if (selectedmonth < 10) {
+                            tanggal = String.valueOf(selectedday + "-" + (++selectedmonth) + "-" + year);
+                        } else {
+                            tanggal = String.valueOf(selectedday + "-" + (++selectedmonth) + "-" + year);
+                        }
+                        try {
+                            SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
+                            Date date = sdf.parse(tanggal);
+                            tanggalpilih = date.getTime();
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                        ettgllahiranak.setText(tanggal);
+                    }
+                },year, month, day);
+                mDatePicker.setTitle("Pilih Tanggal");
+                mDatePicker.show();
+            }
+        });
 
     }
 

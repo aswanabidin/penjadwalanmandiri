@@ -65,6 +65,8 @@
                 android:layout_below="@+id/imgprofilanakJadwal"
                 android:layout_centerHorizontal="true"
                 android:layout_marginBottom="10dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
                 android:layout_marginTop="10dp"
                 android:text="Catatan Kegiatan" />
 
@@ -188,9 +190,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:background="@drawable/stroke_rounded"
+                android:foreground="?attr/selectableItemBackground"
                 android:text="Edit Jadwal"
                 android:textAllCaps="false"
-                android:foreground="?attr/selectableItemBackground"
                 android:textColor="@color/colorPinkSmooth"
                 android:textSize="14sp" />
 
@@ -201,9 +203,9 @@
                 android:layout_below="@+id/btnEditJadwal"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/btn_rounded_corners"
+                android:foreground="?attr/selectableItemBackground"
                 android:text="Hapus Jadwal"
                 android:textAllCaps="false"
-                android:foreground="?attr/selectableItemBackground"
                 android:textColor="@color/colorPutih"
                 android:textSize="14sp" />
 

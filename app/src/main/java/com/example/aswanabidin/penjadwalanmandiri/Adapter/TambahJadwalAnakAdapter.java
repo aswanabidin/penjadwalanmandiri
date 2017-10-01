@@ -12,6 +12,7 @@ import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.aswanabidin.penjadwalanmandiri.Anak.HalamanDetailJadwalAnak;
 import com.example.aswanabidin.penjadwalanmandiri.OrangTua.HalamanDetailJadwalOrtu;
 import com.example.aswanabidin.penjadwalanmandiri.Model.TambahJadwalOrtuModel;
 import com.example.aswanabidin.penjadwalanmandiri.R;
@@ -58,7 +59,7 @@ public class TambahJadwalAnakAdapter extends RecyclerView.Adapter<TambahJadwalAn
         holder.itemCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(context, HalamanDetailJadwalOrtu.class);
+                Intent intent = new Intent(context, HalamanDetailJadwalAnak.class);
                 intent.putExtra("tambahjadwaldariortu", tambahJadwalOrtuModel);
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK); //tadi error nih
                 context.startActivity(intent);

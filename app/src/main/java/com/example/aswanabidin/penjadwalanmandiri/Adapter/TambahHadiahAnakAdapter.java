@@ -12,6 +12,7 @@ import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.aswanabidin.penjadwalanmandiri.Anak.HalamanDetailHadiahAnak;
 import com.example.aswanabidin.penjadwalanmandiri.OrangTua.HalamanDetailHadiahOrtu;
 import com.example.aswanabidin.penjadwalanmandiri.Model.TambahHadiahOrtuModel;
 import com.example.aswanabidin.penjadwalanmandiri.R;
@@ -57,7 +58,7 @@ public class TambahHadiahAnakAdapter extends RecyclerView.Adapter<TambahHadiahAn
         holder.itemCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(context, HalamanDetailHadiahOrtu.class);
+                Intent intent = new Intent(context, HalamanDetailHadiahAnak.class);
                 intent.putExtra("tambahhadiahdariortu", tambahHadiahOrtuModel);
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 context.startActivity(intent);

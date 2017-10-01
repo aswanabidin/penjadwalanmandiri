@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.aswanabidin.penjadwalanmandiri.Anak.HalamanDetailJadwalAnak">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbarlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:layout_collapseMode="pin"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left">
+
+                <TextView
+                    android:id="@+id/toolbarTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Detail Jadwal"
+                    android:textColor="@color/colorPutih"
+                    android:textSize="18sp" />
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/appbarlayout">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imgprofilanakJadwal"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/ic_account_circle" />
+
+            <TextView
+                android:id="@+id/tvcatatankegiatan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imgprofilanakJadwal"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:text="Catatan Kegiatan" />
+
+            <TextView
+                android:id="@+id/tvnamakegiatan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvcatatankegiatan"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:drawableLeft="@drawable/ic_namakegiatan"
+                android:drawablePadding="10dp"
+                android:text="Nama Kegiatan"
+                android:textSize="14sp" />
+
+            <View
+                android:id="@+id/garisnamakegiatan"
+                style="@style/Divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/tvnamakegiatan"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="15dp"
+                android:layout_toRightOf="@+id/tvatau"
+                android:background="@color/colorGrayText" />
+
+            <TextView
+                android:id="@+id/tvtanggalkegiatan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/garisnamakegiatan"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:drawableLeft="@drawable/ic_date"
+                android:drawablePadding="10dp"
+                android:text="Tanggal Kegiatan"
+                android:textSize="14sp" />
+
+            <View
+                android:id="@+id/garistglkegiatan"
+                style="@style/Divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/tvtanggalkegiatan"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="15dp"
+                android:layout_toRightOf="@+id/tvatau"
+                android:background="@color/colorGrayText" />
+
+            <TextView
+                android:id="@+id/tvwaktukegiatan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/garistglkegiatan"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:drawableLeft="@drawable/ic_waktu"
+                android:drawablePadding="10dp"
+                android:text="Waktu Kegiatan"
+                android:textSize="14sp" />
+
+            <View
+                android:id="@+id/gariswaktukegiatan"
+                style="@style/Divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/tvwaktukegiatan"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="15dp"
+                android:layout_toRightOf="@+id/tvatau"
+                android:background="@color/colorGrayText" />
+
+            <TextView
+                android:id="@+id/tvpoinkegiatan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/gariswaktukegiatan"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:drawableLeft="@drawable/ic_poin"
+                android:drawablePadding="10dp"
+                android:text="Poin Kegiatan"
+                android:textSize="14sp" />
+
+            <View
+                android:id="@+id/garispoinkegiatan"
+                style="@style/Divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/tvpoinkegiatan"
+                android:layout_marginBottom="30dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="15dp"
+                android:layout_toRightOf="@+id/tvatau"
+                android:background="@color/colorGrayText" />
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:background="@color/colorPutih"
+            android:padding="10dp">
+
+            <Button
+                android:id="@+id/btnEditJadwal"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/stroke_rounded"
+                android:foreground="?attr/selectableItemBackground"
+                android:text="Edit Jadwal"
+                android:textAllCaps="false"
+                android:textColor="@color/colorPinkSmooth"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/btnHapusJadwal"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/btnEditJadwal"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/btn_rounded_corners"
+                android:foreground="?attr/selectableItemBackground"
+                android:text="Hapus Jadwal"
+                android:textAllCaps="false"
+                android:textColor="@color/colorPutih"
+                android:textSize="14sp" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

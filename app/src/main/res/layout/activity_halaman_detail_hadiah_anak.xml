@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.aswanabidin.penjadwalanmandiri.Anak.HalamanDetailHadiahAnak">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbarlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:layout_collapseMode="pin"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left">
+
+                <TextView
+                    android:id="@+id/toolbarTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Detail Hadiah"
+                    android:textColor="@color/colorPutih"
+                    android:textSize="18sp" />
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/appbarlayout">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imghadiah"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/ic_account_circle" />
+
+            <TextView
+                android:id="@+id/tvnamahadiah"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imghadiah"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:drawableLeft="@drawable/ic_hadiah"
+                android:drawablePadding="10dp"
+                android:text="Nama Hadiah"
+                android:textSize="14sp" />
+
+            <View
+                android:id="@+id/garisnamakegiatan"
+                style="@style/Divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/tvnamahadiah"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="15dp"
+                android:layout_toRightOf="@+id/tvatau"
+                android:background="@color/colorGrayText" />
+
+            <TextView
+                android:id="@+id/tvpoinhadiah"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/garisnamakegiatan"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:drawableLeft="@drawable/ic_poin"
+                android:drawablePadding="10dp"
+                android:text="Poin Hadiah"
+                android:textSize="14sp" />
+
+            <View
+                android:id="@+id/garistglkegiatan"
+                style="@style/Divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/tvpoinhadiah"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="15dp"
+                android:layout_toRightOf="@+id/tvatau"
+                android:background="@color/colorGrayText" />
+
+            <TextView
+                android:id="@+id/tvdeskripsihadiah"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/garistglkegiatan"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:drawableLeft="@drawable/ic_account"
+                android:drawablePadding="10dp"
+                android:text="Deskripsi Hadiah"
+                android:textSize="14sp" />
+
+            <View
+                android:id="@+id/garisdeskripsi"
+                style="@style/Divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/tvdeskripsihadiah"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="15dp"
+                android:layout_toRightOf="@+id/tvatau"
+                android:background="@color/colorGrayText" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:background="@color/colorPutih"
+            android:padding="10dp">
+
+            <Button
+                android:id="@+id/btnEditHadiah"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/stroke_rounded"
+                android:text="Edit Hadiah"
+                android:foreground="?attr/selectableItemBackground"
+                android:textAllCaps="false"
+                android:textColor="@color/colorPinkSmooth"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/btnHapusHadiah"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/btnEditHadiah"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/btn_rounded_corners"
+                android:text="Hapus Hadiah"
+                android:foreground="?attr/selectableItemBackground"
+                android:textAllCaps="false"
+                android:textColor="@color/colorPutih"
+                android:textSize="14sp" />
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

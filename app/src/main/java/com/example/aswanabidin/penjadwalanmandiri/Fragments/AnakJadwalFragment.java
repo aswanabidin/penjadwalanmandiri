@@ -16,6 +16,7 @@ import android.widget.Button;
 import android.widget.ProgressBar;
 
 import com.example.aswanabidin.penjadwalanmandiri.Adapter.TambahJadwalAnakAdapter;
+import com.example.aswanabidin.penjadwalanmandiri.Anak.HalamanTambahJadwalAnak;
 import com.example.aswanabidin.penjadwalanmandiri.OrangTua.HalamanTambahJadwal;
 import com.example.aswanabidin.penjadwalanmandiri.Model.TambahJadwalOrtuModel;
 import com.example.aswanabidin.penjadwalanmandiri.R;
@@ -79,7 +80,7 @@ public class AnakJadwalFragment extends Fragment {
         btntambahjadwal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getActivity(), HalamanTambahJadwal.class);
+                Intent intent = new Intent(getActivity(), HalamanTambahJadwalAnak.class);
                 startActivity(intent);
             }
         });
