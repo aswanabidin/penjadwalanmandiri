@@ -2,7 +2,7 @@
 <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/cardview_selesaijadwalanak"
     android:layout_width="match_parent"
-    android:layout_height="100dp"
+    android:layout_height="110dp"
     android:layout_marginBottom="2dp"
     android:layout_marginLeft="10dp"
     android:layout_marginRight="10dp"
@@ -20,8 +20,8 @@
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/imgprofilanakJadwal"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
             android:layout_centerVertical="true"
             android:layout_marginLeft="10dp"
             android:src="@drawable/ic_account_circle" />
@@ -36,11 +36,11 @@
             android:layout_toRightOf="@+id/imgprofilanakJadwal"
             android:text="Nama Anak"
             android:textColor="@color/colorPinkSmooth"
-            android:textSize="14sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/tvTanggalJadwal"
-            android:layout_width="130dp"
+            android:layout_width="110dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:layout_toRightOf="@+id/tvNamaAnakJadwal"
@@ -48,7 +48,7 @@
             android:paddingRight="10dp"
             android:text="Tanggal"
             android:textColor="@color/colorGrayText"
-            android:textSize="14sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/tvNamaKegiatanJadwal"
@@ -59,7 +59,7 @@
             android:layout_toRightOf="@+id/imgprofilanakJadwal"
             android:text="Kegiatan"
             android:textColor="@color/colorGray"
-            android:textSize="14sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/tvWaktuJadwal"
@@ -72,7 +72,7 @@
             android:paddingRight="10dp"
             android:text="Waktu"
             android:textColor="@color/colorGrayText"
-            android:textSize="14sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/tvPoinJadwal"
@@ -85,7 +85,7 @@
             android:layout_toRightOf="@+id/imgprofilanakJadwal"
             android:text="100"
             android:textColor="@color/colorGrayText"
-            android:textSize="14sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -95,7 +95,7 @@
             android:layout_toRightOf="@+id/tvPoinJadwal"
             android:text="Poin"
             android:textColor="@color/colorGrayText"
-            android:textSize="14sp" />
+            android:textSize="16sp" />
 
         <LinearLayout
             android:id="@+id/lrlinevertical"

@@ -41,40 +41,40 @@ public class HalamanLoginAnak extends AppCompatActivity implements View.OnClickL
         progressDialog.setMessage("Masuk...");
 
         btnmasuksebagaianak = (Button) findViewById(R.id.btnMasukSebagaiAnak);
-//        btnmasuksebagaianak.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                String email = etemail.getText().toString().trim();
-//                final String pass = etpass.getText().toString().trim();
-//
-//                if (TextUtils.isEmpty(email)) {
-//                    Toast.makeText(HalamanLoginAnak.this, "Masukkan Email Orang Tua!", Toast.LENGTH_SHORT).show();
-//                    return;
-//                }
-//
-//                if (TextUtils.isEmpty(pass)) {
-//                    Toast.makeText(HalamanLoginAnak.this, "Masukkan Kata Sandi!", Toast.LENGTH_SHORT).show();
-//                    return;
-//                }
-//
-//                progressDialog.show();
-//                auth.signInWithEmailAndPassword(email, pass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-//                    @Override
-//                    public void onComplete(@NonNull Task<AuthResult> task) {
-//
-//                        if (!task.isSuccessful()) {
-//                            progressDialog.dismiss();
-//                            Toast.makeText(HalamanLoginAnak.this, "Akun tidak terdaftar!", Toast.LENGTH_SHORT).show();
-//                        } else {
-//                            //pindahin ke halaman main
-//                            Intent intent = new Intent(HalamanLoginAnak.this, HalamanPenjadwalanMandiri.class);
-//                            startActivity(intent);
-//                        }
-//                    }
-//                });
-//                progressDialog.dismiss();
-//            }
-//        });
+        btnmasuksebagaianak.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String email = etemail.getText().toString().trim();
+                final String pass = etpass.getText().toString().trim();
+
+                if (TextUtils.isEmpty(email)) {
+                    Toast.makeText(HalamanLoginAnak.this, "Masukkan Email Orang Tua!", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+                if (TextUtils.isEmpty(pass)) {
+                    Toast.makeText(HalamanLoginAnak.this, "Masukkan Kata Sandi!", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+                progressDialog.show();
+                auth.signInWithEmailAndPassword(email, pass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+
+                        if (!task.isSuccessful()) {
+                            progressDialog.dismiss();
+                            Toast.makeText(HalamanLoginAnak.this, "Akun tidak terdaftar!", Toast.LENGTH_SHORT).show();
+                        } else {
+                            //pindahin ke halaman main
+                            Intent intent = new Intent(HalamanLoginAnak.this, HalamanPenjadwalanMandiri.class);
+                            startActivity(intent);
+                        }
+                    }
+                });
+                progressDialog.dismiss();
+            }
+        });
     }
 
     @Override
